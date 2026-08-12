@@ -1,578 +1,597 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Manav Shah — Software Engineer | AI Automation & Salesforce</title>
-    <meta name="description" content="Portfolio of Manav Shah — Software Engineer building AI automation, Salesforce solutions, and document-intelligence systems.">
-    <meta property="og:title" content="Manav Shah — Software Engineer Portfolio">
-    <meta property="og:description" content="Building AI-powered automation, Salesforce solutions, and document-intelligence systems.">
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            /* Light bluish-greenish palette */
-            --bg-primary: #EDF3F8;
-            --bg-secondary: #E3ECF3;
-            --bg-elevated: #FFFFFF;
-            --bg-glass: rgba(255, 255, 255, 0.65);
-            --bg-glass-hover: rgba(255, 255, 255, 0.85);
-            --border-subtle: rgba(0, 20, 40, 0.07);
-            --border-hover: rgba(0, 20, 40, 0.14);
-            --ink-primary: #0B1E33;
-            --ink-secondary: #2D4052;
-            --ink-muted: #5B6F82;
-            --accent-blue: #2D82B7;
-            --accent-blue-deep: #1F618D;
-            --accent-cyan: #2E9CA0;
-            --accent-gold-subtle: #C99C3A;
-            --radius-sm: 10px;
-            --radius: 16px;
-            --radius-lg: 22px;
-            --radius-xl: 28px;
-            --maxw: 1160px;
-            --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
-            --ease-out-back: cubic-bezier(0.34, 1.56, 0.64, 1);
-            --font-body: 'Plus Jakarta Sans', sans-serif;
-            --font-display: 'Plus Jakarta Sans', sans-serif;
-            --font-mono: 'JetBrains Mono', monospace;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
-            --shadow-lg: 0 12px 28px rgba(0,0,0,0.08);
-            --shadow-glow-blue: 0 0 30px -8px rgba(45, 130, 183, 0.2);
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manav Shah — Software Engineer | Salesforce & AI Automation</title>
+<meta name="description" content="Portfolio of Manav Shah — Software Engineer building Salesforce solutions and AI-driven automation.">
+<meta property="og:title" content="Manav Shah — Software Engineer Portfolio">
+<meta property="og:description" content="Salesforce development and AI-driven automation, from enterprise workflows to document intelligence.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg: #F7F7FB;
+    --bg-alt: #EEF0F7;
+    --surface: #FFFFFF;
+    --dark-bg: #10132B;
+    --dark-surface: #171B3D;
+    --ink: #14162B;
+    --ink-secondary: #4B4F66;
+    --ink-muted: #7D8199;
+    --border: rgba(20,22,43,0.11);
+    --border-hover: rgba(20,22,43,0.22);
+    --primary: #2138B0;
+    --primary-deep: #171F7A;
+    --gold: #C8A24A;
+    --radius-sm: 10px;
+    --radius: 16px;
+    --radius-lg: 22px;
+    --maxw: 1120px;
+    --ease: cubic-bezier(.19,1,.22,1);
+    --font-display: 'Bricolage Grotesque', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+    --shadow-sm: 0 2px 8px rgba(16,18,43,0.05);
+    --shadow-md: 0 10px 28px rgba(16,18,43,0.08);
+    --shadow-lg: 0 22px 48px rgba(16,18,43,0.14);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation-duration:.01ms !important; transition-duration:.01ms !important;} }
+  body{ background:var(--bg); color:var(--ink); font-family:var(--font-body); line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  ::selection{background:var(--primary); color:#fff;}
+  button{font-family:inherit; cursor:pointer;}
+  .wrap{max-width:var(--maxw); margin:0 auto; padding:0 24px;}
+  @media(min-width:640px){.wrap{padding:0 32px;}}
 
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        html { scroll-behavior: smooth; }
-        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+  h1,h2,h3{font-family:var(--font-display); letter-spacing:-0.015em; color:var(--ink); font-weight:700;}
+  h4{font-family:var(--font-mono); letter-spacing:.06em; text-transform:uppercase; color:var(--ink); font-weight:600; font-size:12.5px;}
 
-        body {
-            background: var(--bg-primary);
-            color: var(--ink-primary);
-            font-family: var(--font-body);
-            line-height: 1.65;
-            -webkit-font-smoothing: antialiased;
-            overflow-x: hidden;
-            position: relative;
-        }
-        body::before {
-            content: ''; position: fixed; inset: 0; z-index: -2;
-            background:
-                radial-gradient(ellipse 70% 50% at 20% 5%, rgba(45,130,183,0.06) 0%, transparent 55%),
-                radial-gradient(ellipse 55% 60% at 80% 15%, rgba(46,156,160,0.05) 0%, transparent 50%),
-                radial-gradient(ellipse 45% 45% at 50% 75%, rgba(45,130,183,0.04) 0%, transparent 50%),
-                var(--bg-primary);
-        }
-        body::after {
-            content: ''; position: fixed; inset: 0; z-index: -1; opacity: 0.15; pointer-events: none;
-            background-image:
-                radial-gradient(circle at 30% 12%, rgba(0,0,0,0.02) 1px, transparent 1px),
-                radial-gradient(circle at 65% 30%, rgba(0,0,0,0.015) 1px, transparent 1px),
-                radial-gradient(circle at 70% 65%, rgba(0,0,0,0.018) 1px, transparent 1px);
-            background-size: 70px 70px, 100px 100px, 85px 85px;
-            background-position: 0 0, 35px 18px, 15px 50px;
-        }
+  .eyebrow{
+    font-family:var(--font-mono); font-size:11px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--primary); display:inline-flex; align-items:center; gap:10px; font-weight:500;
+  }
+  .eyebrow::before{content:""; width:22px; height:1px; background:var(--primary); display:inline-block;}
+  .section-head{text-align:center; margin:0 auto 44px; max-width:600px;}
+  .section-head .eyebrow{justify-content:center;}
+  .section-head h2{font-size:clamp(28px,3.6vw,38px); font-weight:600; margin-top:14px;}
+  .section-head p{color:var(--ink-secondary); margin-top:12px; font-size:15.5px;}
 
-        a { color: inherit; text-decoration: none; }
-        img { max-width: 100%; display: block; }
-        ::selection { background: var(--accent-blue); color: #fff; }
-        button { font-family: inherit; cursor: pointer; }
+  .reveal{opacity:0; transform:translateY(24px); transition:opacity .75s var(--ease), transform .75s var(--ease); transition-delay:var(--d,0s);}
+  .reveal.in{opacity:1; transform:translateY(0);}
 
-        .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; }
-        @media(min-width:640px){ .wrap { padding: 0 34px; } }
-        @media(min-width:1024px){ .wrap { padding: 0 42px; } }
+  /* NAV */
+  header.site-nav{position:sticky; top:0; z-index:100; background:rgba(247,247,251,0.97); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); transition:background .3s;}
+  .nav-inner{max-width:var(--maxw); margin:0 auto; padding:15px 24px; display:flex; align-items:center; justify-content:space-between; position:relative; z-index:1;}
+  @media(min-width:640px){.nav-inner{padding:15px 32px;}}
+  .logo-mark{font-family:var(--font-display); font-weight:700; font-size:17px; color:var(--ink);}
+  nav.links{display:none; gap:2px; align-items:center;}
+  @media(min-width:860px){nav.links{display:flex;}}
+  nav.links a{position:relative; font-family:var(--font-mono); font-size:12.5px; letter-spacing:.04em; text-transform:uppercase; font-weight:500; color:var(--ink-secondary); padding:9px 13px; border-radius:7px; transition:color .3s;}
+  nav.links a:hover{color:var(--primary);}
+  nav.links a::after{content:""; position:absolute; left:13px; right:13px; bottom:3px; height:2px; background:var(--primary); transform:scaleX(0); transition:transform .35s var(--ease);}
+  nav.links a:hover::after{transform:scaleX(1);}
 
-        h1,h2,h3,h4 { font-family: var(--font-display); letter-spacing: -0.025em; color: var(--ink-primary); }
-        .eyebrow {
-            font-family: var(--font-mono); font-size: 10.5px; letter-spacing: 0.15em; text-transform: uppercase;
-            color: var(--accent-cyan); display: inline-flex; align-items: center; gap: 10px; font-weight: 500;
-        }
-        .eyebrow::before { content: ""; width: 24px; height: 1.5px; background: linear-gradient(90deg, var(--accent-cyan), transparent); display: inline-block; border-radius: 2px; }
-        .section-head { text-align: center; margin: 0 auto 48px; max-width: 600px; }
-        .section-head .eyebrow { justify-content: center; }
-        .section-head .eyebrow::before { background: linear-gradient(90deg, transparent, var(--accent-cyan)); }
-        .section-head .eyebrow::after { content: ""; width: 24px; height: 1.5px; background: linear-gradient(90deg, var(--accent-cyan), transparent); display: inline-block; border-radius: 2px; }
-        .section-head h2 { font-size: clamp(28px,3.8vw,40px); font-weight: 700; margin-top: 14px; }
-        .section-head p { color: var(--ink-secondary); margin-top: 12px; font-size: 15.5px; }
+  .btn{font-family:var(--font-body); font-weight:600; font-size:14px; padding:11px 20px; border-radius:9px; border:1px solid transparent; display:inline-flex; align-items:center; gap:8px; transition:transform .3s var(--ease), box-shadow .3s, background .3s, border-color .3s, color .3s; white-space:nowrap; position:relative; z-index:1; isolation:isolate;}
+  .btn:focus-visible{outline:2px solid var(--primary); outline-offset:3px;}
+  .btn-primary{background:var(--primary); color:#ffffff !important; box-shadow:0 4px 14px rgba(33,56,176,0.28);}
+  .btn-primary:hover{background:var(--primary-deep); color:#ffffff !important; transform:translateY(-2px); box-shadow:0 10px 26px rgba(33,56,176,0.4);}
+  .btn-outline{background:var(--surface); color:var(--primary) !important; border-color:rgba(33,56,176,0.35);}
+  .btn-outline:hover{border-color:var(--primary); background:rgba(33,56,176,0.06); color:var(--primary-deep) !important; transform:translateY(-2px);}
+  .nav-cta{display:none;}
+  @media(min-width:860px){.nav-cta{display:inline-flex;}}
 
-        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo); transition-delay: var(--d,0s); }
-        .reveal.in { opacity: 1; transform: translateY(0); }
+  .menu-btn{display:flex; flex-direction:column; gap:5px; width:38px; height:38px; border-radius:8px; border:1px solid var(--border); background:var(--surface); cursor:pointer; z-index:110;}
+  @media(min-width:860px){.menu-btn{display:none;}}
+  .menu-btn span{width:17px; height:2px; background:var(--ink); margin:0 auto; border-radius:2px; transition:transform .4s, opacity .4s;}
+  .menu-btn[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg);}
+  .menu-btn[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .menu-btn[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg);}
+  .mobile-menu{position:fixed; inset:0; z-index:105; background:rgba(247,247,251,0.98); backdrop-filter:blur(20px); display:flex; flex-direction:column; align-items:flex-start; justify-content:center; gap:2px; padding:28px 34px; opacity:0; visibility:hidden; transform:translateY(-10px); transition:opacity .4s, transform .4s, visibility 0s linear .4s;}
+  .mobile-menu.open{opacity:1; visibility:visible; transform:translateY(0); transition:opacity .4s, transform .4s, visibility 0s;}
+  .mobile-menu a{font-family:var(--font-display); font-size:clamp(26px,7vw,36px); font-weight:600; color:var(--ink); padding:9px 0; opacity:0; transform:translateY(16px); transition:opacity .45s, transform .45s;}
+  .mobile-menu.open a{opacity:1; transform:translateY(0);}
+  .mobile-menu .btn{margin-top:14px; opacity:0; transform:translateY(16px); transition:opacity .45s .25s, transform .45s .25s;}
+  .mobile-menu.open .btn{opacity:1; transform:translateY(0);}
 
-        /* ── NAVIGATION ── */
-        header.site-nav {
-            position: sticky; top: 0; z-index: 100;
-            background: rgba(237,243,248,0.72); backdrop-filter: blur(22px) saturate(150%);
-            -webkit-backdrop-filter: blur(22px) saturate(150%);
-            border-bottom: 1px solid rgba(0,0,0,0.04);
-            transition: background 0.4s, border-color 0.4s;
-        }
-        header.site-nav.scrolled { background: rgba(237,243,248,0.92); border-bottom-color: rgba(0,0,0,0.08); }
-        .nav-inner { max-width: var(--maxw); margin: 0 auto; padding: 13px 24px; display: flex; align-items: center; justify-content: space-between; }
-        .logo-mark { font-family: var(--font-display); font-weight: 700; font-size: 15.5px; color: var(--ink-primary); text-decoration: none; z-index: 110; }
-        nav.links { display: none; gap: 2px; align-items: center; }
-        @media(min-width:860px){ nav.links { display: flex; } }
-        nav.links a { position: relative; font-size: 13px; font-weight: 500; color: var(--ink-secondary); padding: 8px 13px; border-radius: 7px; transition: color 0.3s, background 0.3s; }
-        nav.links a:hover, nav.links a:focus-visible { color: var(--accent-blue); background: rgba(45,130,183,0.05); }
-        nav.links a.nav-active { color: var(--accent-blue); font-weight: 600; }
-        nav.links a::after { content: ""; position: absolute; left: 13px; right: 13px; bottom: 2px; height: 2px; background: var(--accent-blue); transform: scaleX(0); transition: transform 0.35s var(--ease-out-expo); }
-        nav.links a:hover::after { transform: scaleX(1); }
+  /* HERO */
+  .hero{position:relative; padding:64px 0 60px; overflow:hidden;}
+  @media(min-width:820px){.hero{padding:92px 0 76px;}}
+  .hero-inner{position:relative; z-index:2; display:grid; grid-template-columns:1fr; gap:40px; align-items:center;}
+  @media(min-width:820px){.hero-inner{grid-template-columns:1.2fr .8fr; text-align:left;}}
+  .hero-text-col{display:flex; flex-direction:column; align-items:center; text-align:center;}
+  @media(min-width:820px){.hero-text-col{align-items:flex-start; text-align:left;}}
+  .hero-badge{display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600; color:var(--primary); background:rgba(33,56,176,0.08); border:1px solid rgba(33,56,176,0.18); padding:7px 14px; border-radius:999px; margin-bottom:22px;}
+  .hero h1{font-size:clamp(42px,7.5vw,66px); font-weight:600; line-height:1.05; margin-bottom:10px;}
+  .hero .role{font-family:var(--font-body); font-size:clamp(16px,2vw,19px); font-weight:600; color:var(--ink-secondary); margin-bottom:18px;}
+  .hero p.lead{font-size:17px; color:var(--ink-secondary); max-width:50ch; margin-bottom:30px;}
+  .hero-actions{display:flex; flex-wrap:wrap; gap:12px; margin-bottom:28px;}
+  .hero-social-row{display:flex; gap:12px;}
+  .social-circle{width:42px; height:42px; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--surface); border:1px solid var(--border); color:var(--ink-secondary); transition:transform .3s var(--ease), color .3s, border-color .3s;}
+  .social-circle:hover{transform:translateY(-3px); color:var(--primary); border-color:var(--primary);}
+  .social-circle svg{width:18px; height:18px;}
 
-        .btn {
-            font-family: var(--font-body); font-weight: 600; font-size: 13px; padding: 10px 20px;
-            border-radius: 9px; border: 1px solid transparent; cursor: pointer; text-decoration: none;
-            display: inline-flex; align-items: center; gap: 8px;
-            transition: transform 0.3s var(--ease-out-back), box-shadow 0.3s, background 0.3s, border-color 0.3s;
-            white-space: nowrap;
-        }
-        .btn:focus-visible { outline: 2px solid var(--accent-blue); outline-offset: 3px; }
-        .btn-primary { background: var(--accent-blue); color: #fff; box-shadow: 0 3px 16px rgba(45,130,183,0.3); }
-        .btn-primary:hover { background: var(--accent-blue-deep); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(45,130,183,0.4); }
-        .btn-outline-blue { background: transparent; color: var(--accent-blue); border-color: rgba(45,130,183,0.4); }
-        .btn-outline-blue:hover { border-color: var(--accent-blue); background: rgba(45,130,183,0.04); transform: translateY(-2px); }
-        .nav-cta { display: none; }
-        @media(min-width:860px){ .nav-cta { display: inline-flex; } }
+  .hero-photo-col{display:flex; justify-content:center;}
+  .hero-photo-wrapper{position:relative; width:100%; max-width:230px; aspect-ratio:4/5;}
+  .hero-photo-frame-decor{position:absolute; inset:-8px; border:1.5px solid rgba(33,56,176,0.22); border-radius:var(--radius-lg); transform:rotate(-2deg);}
+  .hero-photo{width:100%; height:100%; object-fit:cover; border-radius:var(--radius); border:1px solid var(--border); box-shadow:var(--shadow-lg);}
+  .hero-photo-placeholder{width:100%; height:100%; border-radius:var(--radius); background:var(--surface); border:1px solid var(--border); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; color:var(--ink-muted); font-size:12.5px; text-align:center;}
 
-        .menu-btn {
-            display: flex; flex-direction: column; gap: 5px; width: 38px; height: 38px;
-            border-radius: 8px; border: 1px solid rgba(0,0,0,0.1); background: rgba(0,0,0,0.02);
-            cursor: pointer; z-index: 110; transition: border-color 0.3s;
-        }
-        @media(min-width:860px){ .menu-btn { display: none; } }
-        .menu-btn span { width: 17px; height: 2px; background: var(--ink-primary); margin: 0 auto; border-radius: 2px; transition: transform 0.4s, opacity 0.4s; }
-        .menu-btn[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-        .menu-btn[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
-        .menu-btn[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+  /* SECTIONS */
+  section{padding:76px 0;}
+  @media(min-width:820px){section{padding:100px 0;}}
+  section.alt{background:var(--bg-alt);}
+  section.dark{background:var(--dark-bg); color:rgba(255,255,255,0.92);}
+  section.dark h2, section.dark h3{color:#fff;}
+  section.dark .eyebrow{color:var(--gold);}
+  section.dark .eyebrow::before{background:var(--gold);}
+  section.dark .section-head p{color:rgba(255,255,255,0.6);}
 
-        .mobile-menu {
-            position: fixed; inset: 0; z-index: 105; background: rgba(237,243,248,0.97); backdrop-filter: blur(28px);
-            display: flex; flex-direction: column; align-items: flex-start; justify-content: center;
-            gap: 2px; padding: 28px 34px; opacity: 0; visibility: hidden; transform: translateY(-10px);
-            transition: opacity 0.4s, transform 0.4s, visibility 0s linear 0.4s;
-        }
-        .mobile-menu.open { opacity: 1; visibility: visible; transform: translateY(0); transition: opacity 0.4s, transform 0.4s, visibility 0s; }
-        .mobile-menu a { font-size: clamp(26px,6vw,38px); font-weight: 700; color: var(--ink-primary); padding: 9px 0; opacity: 0; transform: translateY(18px); transition: opacity 0.45s, transform 0.45s; }
-        .mobile-menu.open a { opacity: 1; transform: translateY(0); }
+  /* ABOUT */
+  .about-grid{display:grid; grid-template-columns:1fr; gap:32px;}
+  @media(min-width:860px){.about-grid{grid-template-columns:1.4fr 1fr;}}
+  .about-text p{color:var(--ink-secondary); font-size:16px; margin-bottom:16px;}
+  .fact-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s;}
+  .fact-card:hover{box-shadow:var(--shadow-md); transform:translateY(-2px);}
+  .fact-row{display:flex; justify-content:space-between; gap:16px; padding:13px 0; border-bottom:1px solid var(--border); font-size:14.5px;}
+  .fact-row:last-child{border-bottom:none;}
+  .fact-label{color:var(--ink-muted); font-size:12.5px;}
+  .fact-value{font-weight:600; text-align:right;}
 
-        /* ── HERO (with background image placeholder) ── */
-        .hero {
-            position: relative; padding: 60px 0 64px; overflow: hidden;
-            background: linear-gradient(135deg, #e6f0f7, #dceaf3);
-        }
-        /* Hero background image – replace with your own image (e.g., images/hero-bg.jpg) */
-        .hero-bg-img {
-            position: absolute; inset: 0; z-index: 0; opacity: 0.25;
-            background-image: url('images/hero-bg.jpg'); /* <-- replace with your image */
-            background-size: cover; background-position: center;
-            pointer-events: none;
-        }
-        .hero-overlay {
-            position: absolute; inset: 0; z-index: 1;
-            background: linear-gradient(180deg, rgba(237,243,248,0.6) 0%, rgba(237,243,248,0.3) 100%);
-        }
-        .hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr; gap: 40px; align-items: center; }
-        @media(min-width:820px){ .hero-inner { grid-template-columns: 1.2fr 0.8fr; text-align: left; } }
-        .hero-text-col { display: flex; flex-direction: column; align-items: center; text-align: center; }
-        @media(min-width:820px){ .hero-text-col { align-items: flex-start; text-align: left; } }
-        .hero-badge { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-cyan); background: rgba(46,156,160,0.1); border: 1px solid rgba(46,156,160,0.25); padding: 7px 14px; border-radius: 999px; margin-bottom: 20px; }
-        .hero h1 { font-size: clamp(38px,7vw,60px); font-weight: 800; line-height: 1.04; margin-bottom: 6px; }
-        .hero .role { font-family: var(--font-mono); font-size: clamp(12px,1.6vw,14px); font-weight: 500; color: var(--accent-blue); margin-bottom: 16px; text-transform: uppercase; }
-        .hero p.lead { font-size: 15.5px; color: var(--ink-secondary); max-width: 52ch; margin-bottom: 20px; }
-        .hero-keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-        .hero-keywords .kw { font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-secondary); background: rgba(0,0,0,0.03); border: 1px solid rgba(0,0,0,0.06); padding: 5px 10px; border-radius: 5px; }
-        .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
-        .hero-social-row { display: flex; gap: 12px; }
+  /* EXPERIENCE */
+  .trace{position:relative; padding-left:32px; max-width:740px; margin:0 auto;}
+  .trace::before{content:""; position:absolute; left:7px; top:8px; bottom:8px; width:2px; background:var(--primary); opacity:.25;}
+  .trace-item{position:relative; padding-bottom:44px;}
+  .trace-item:last-child{padding-bottom:0;}
+  .trace-node{position:absolute; left:-32px; top:5px; width:16px; height:16px; border-radius:50%; background:var(--surface); border:3px solid var(--primary);}
+  .role-title{font-family:var(--font-display); font-weight:600; font-size:19px;}
+  .role-meta{font-size:13px; color:var(--ink-muted); margin:6px 0 14px;}
+  .trace-item ul{color:var(--ink-secondary); font-size:15px; padding-left:19px;}
+  .trace-item li{margin-bottom:7px;}
 
-        .social-circle {
-            width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center;
-            background: rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.08); color: var(--ink-secondary);
-            transition: transform 0.35s var(--ease-out-back), color 0.3s, border-color 0.3s, background 0.3s;
-        }
-        .social-circle:hover { transform: translateY(-3px); }
-        .social-circle.linkedin:hover { color: #0A66C2; border-color: #0A66C2; background: rgba(10,102,194,0.06); }
-        .social-circle.github:hover { color: #181717; border-color: #181717; background: rgba(24,23,23,0.06); }
-        .social-circle.email:hover { color: #EA4335; border-color: #EA4335; background: rgba(234,67,53,0.06); }
-        .social-circle svg { width: 18px; height: 18px; }
+  /* PROJECTS */
+  .featured-project{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:32px 30px; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s; margin-bottom:20px; display:flex; flex-direction:column; gap:14px;}
+  .featured-project:hover{box-shadow:var(--shadow-md); transform:translateY(-2px);}
+  .project-tag{font-size:11.5px; font-weight:600; background:rgba(33,56,176,0.08); color:var(--primary); padding:5px 11px; border-radius:6px; align-self:flex-start;}
+  .featured-project h3{font-size:clamp(19px,2.4vw,23px); font-weight:600;}
+  .featured-project p{color:var(--ink-secondary); font-size:15px;}
+  .featured-project ul{padding-left:19px; color:var(--ink-secondary); font-size:14.5px;}
+  .modal-tech{display:flex; flex-wrap:wrap; gap:8px; margin-top:4px;}
+  .featured-cta{font-weight:600; color:var(--primary); font-size:14px; display:inline-flex; align-items:center; gap:6px; background:none; border:none; margin-top:6px;}
+  .featured-cta svg{width:13px; height:13px; transition:transform .3s;}
+  .featured-cta:hover svg{transform:translateX(3px);}
 
-        /* Smaller photo */
-        .hero-photo-col { display: flex; justify-content: center; }
-        .hero-photo-wrapper { position: relative; width: 100%; max-width: 200px; aspect-ratio: 4/5; }
-        @media(min-width:820px){ .hero-photo-wrapper { max-width: 220px; } }
-        .hero-photo-frame-decor { position: absolute; inset: -8px; border: 2px solid rgba(45,130,183,0.25); border-radius: var(--radius-xl); transform: rotate(-2deg); }
-        .hero-photo-glow { position: absolute; inset: -14px; border-radius: 30px; background: radial-gradient(ellipse at center, rgba(45,130,183,0.12), transparent 65%); }
-        .hero-photo { width: 100%; height: 100%; object-fit: cover; border-radius: var(--radius-lg); border: 1px solid rgba(0,0,0,0.06); box-shadow: var(--shadow-lg); }
-        .hero-photo-placeholder { width: 100%; height: 100%; border-radius: var(--radius-lg); background: #eef2f7; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; color: var(--ink-muted); font-family: var(--font-mono); font-size: 10px; }
+  .project-grid{display:grid; grid-template-columns:1fr; gap:18px;}
+  @media(min-width:640px){.project-grid{grid-template-columns:repeat(2,1fr);}}
+  .project-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 22px; text-align:left; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s; display:flex; flex-direction:column; gap:12px;}
+  .project-card:hover{box-shadow:var(--shadow-md); transform:translateY(-3px);}
+  .project-icon{width:38px; height:38px; border-radius:9px; background:rgba(33,56,176,0.08); display:flex; align-items:center; justify-content:center; color:var(--primary); font-weight:700; font-size:13px;}
+  .project-card h3{font-size:17px; font-weight:600;}
+  .project-card p{color:var(--ink-secondary); font-size:14px;}
+  .view-more{margin-top:auto; font-size:13px; font-weight:600; color:var(--primary); display:inline-flex; align-items:center; gap:5px;}
+  .view-more svg{width:12px; height:12px;}
 
-        /* ── SECTIONS ── */
-        section { padding: 72px 0; }
-        @media(min-width:820px){ section { padding: 90px 0; } }
-        section.alt { background: rgba(0,0,0,0.015); border-top: 1px solid rgba(0,0,0,0.035); border-bottom: 1px solid rgba(0,0,0,0.035); }
+  /* MODALS */
+  .modal-overlay{position:fixed; inset:0; z-index:200; background:rgba(15,17,40,0.6); backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; padding:18px; opacity:0; visibility:hidden; transition:opacity .35s;}
+  .modal-overlay.open{opacity:1; visibility:visible;}
+  .modal-box{background:#fff; border-radius:var(--radius-lg); max-width:560px; width:100%; max-height:84vh; overflow-y:auto; padding:32px; transform:translateY(24px) scale(.97); transition:transform .4s; box-shadow:0 24px 60px rgba(0,0,0,0.2);}
+  .modal-overlay.open .modal-box{transform:translateY(0) scale(1);}
+  .modal-close{float:right; width:34px; height:34px; border-radius:50%; border:1px solid var(--border); background:var(--bg-alt); display:flex; align-items:center; justify-content:center; color:var(--ink-muted);}
+  .modal-close:hover{color:var(--ink);}
+  .modal-box h3{font-size:21px; margin:10px 0 14px; padding-right:36px;}
+  .modal-box ul{padding-left:19px; color:var(--ink-secondary); font-size:15px; margin-bottom:14px;}
+  .modal-box li{margin-bottom:7px;}
 
-        /* ── ABOUT ── */
-        .about-grid { display: grid; grid-template-columns: 1fr; gap: 30px; }
-        @media(min-width:860px){ .about-grid { grid-template-columns: 1.5fr 1fr; } }
-        .about-text p { color: var(--ink-secondary); font-size: 15px; margin-bottom: 15px; }
-        .about-metrics { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-        .metric-card {
-            background: var(--bg-glass); border: 1px solid var(--border-subtle); border-radius: var(--radius);
-            padding: 16px 12px; text-align: center; backdrop-filter: blur(12px);
-            transition: transform 0.35s, box-shadow 0.35s, background 0.35s, border-color 0.35s;
-        }
-        .metric-card:hover {
-            transform: translateY(-4px); box-shadow: var(--shadow-md), var(--shadow-glow-blue);
-            background: linear-gradient(135deg, #ffffff, #e6f2fc); border-color: rgba(45,130,183,0.25);
-        }
-        .metric-number { font-family: var(--font-display); font-size: clamp(28px,4vw,34px); font-weight: 800; color: var(--accent-blue); line-height: 1.1; margin-bottom: 4px; }
-        .metric-number.gold { color: var(--accent-gold-subtle); }
-        .metric-label { font-family: var(--font-mono); font-size: 9.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); }
+  /* SKILLS */
+  .skills-grid{display:grid; grid-template-columns:1fr; gap:16px;}
+  @media(min-width:700px){.skills-grid{grid-template-columns:repeat(2,1fr);}}
+  .skill-group{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 22px; box-shadow:var(--shadow-sm);}
+  .skill-group h4{color:var(--primary); margin-bottom:14px;}
+  .chip-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{font-size:13.5px; background:var(--bg-alt); padding:7px 13px; border-radius:999px; border:1px solid var(--border); transition:transform .25s, border-color .25s, color .25s;}
+  .chip:hover{transform:translateY(-2px); border-color:var(--primary); color:var(--primary);}
 
-        /* ── EXPERIENCE ── */
-        .trace { position: relative; padding-left: 34px; max-width: 760px; margin: 0 auto; }
-        .trace::before { content:""; position: absolute; left:7px; top:8px; bottom:8px; width:2px; background: linear-gradient(180deg, var(--accent-blue), var(--accent-cyan)); opacity:0.35; }
-        .trace-item { position: relative; padding-bottom: 44px; }
-        .trace-node { position: absolute; left:-34px; top:5px; width:16px; height:16px; border-radius:50%; background: #fff; border:3px solid var(--accent-blue); }
-        .role-title { font-family: var(--font-display); font-weight:700; font-size:19px; }
-        .role-meta { font-family: var(--font-mono); font-size:11px; color: var(--ink-muted); margin:6px 0 14px; text-transform:uppercase; }
-        .trace-item ul { color: var(--ink-secondary); font-size:14.5px; padding-left:18px; }
-        .trace-item li { margin-bottom:7px; }
+  /* PUBLICATION (dark) */
+  .pub-strip{display:grid; gap:28px; grid-template-columns:1fr; align-items:center;}
+  @media(min-width:820px){.pub-strip{grid-template-columns:1fr 1.3fr;}}
+  .pub-image-col img{max-width:100%; border-radius:12px; box-shadow:0 20px 44px rgba(0,0,0,0.4); cursor:zoom-in;}
+  .pub-image-placeholder{aspect-ratio:4/5; border-radius:12px; border:1px dashed rgba(255,255,255,0.22); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:rgba(255,255,255,0.45); font-size:12.5px; text-align:center;}
+  .pub-text-col{display:flex; flex-direction:column; gap:14px;}
+  .pub-badge{font-size:11.5px; font-weight:600; background:rgba(200,162,74,0.15); color:var(--gold); padding:7px 13px; border-radius:7px; align-self:flex-start;}
+  .pub-text-col h3{font-size:clamp(19px,2.6vw,24px); line-height:1.3;}
+  .pub-text-col p{color:rgba(255,255,255,0.68); font-size:15px;}
 
-        /* ── PROJECTS (no images) ── */
-        .featured-project {
-            background: var(--bg-glass); border:1px solid var(--border-subtle); border-radius: var(--radius-xl);
-            padding: 32px 30px; backdrop-filter: blur(12px); box-shadow: var(--shadow-md);
-            transition: transform 0.4s, box-shadow 0.4s; margin-bottom: 22px;
-            display: flex; flex-direction: column; gap: 14px;
-        }
-        .featured-project:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg), var(--shadow-glow-blue); }
-        .featured-project .project-tag { font-family: var(--font-mono); font-size:10px; background: rgba(45,130,183,0.1); color: var(--accent-blue); padding:5px 10px; border-radius:5px; align-self: flex-start; border:1px solid rgba(45,130,183,0.18); }
-        .featured-project h3 { font-size: clamp(18px,2.4vw,22px); font-weight:700; }
-        .featured-project p { color: var(--ink-secondary); font-size:14.5px; }
-        .featured-project ul { padding-left:18px; color: var(--ink-secondary); font-size:14px; }
-        .featured-project .modal-tech { display:flex; flex-wrap:wrap; gap:7px; margin-top:4px; }
-        .featured-cta {
-            font-weight:600; color: var(--accent-blue); font-size:14px; display:inline-flex; align-items:center; gap:6px;
-            background:none; border:none; cursor:pointer; margin-top: 8px;
-        }
-        .featured-cta svg { width:12px; height:12px; transition: transform 0.3s; }
-        .featured-cta:hover svg { transform: translateX(3px); }
+  /* CERTIFICATIONS */
+  .cert-grid{display:grid; grid-template-columns:1fr; gap:14px;}
+  @media(min-width:700px){.cert-grid{grid-template-columns:repeat(3,1fr);}}
+  .cert-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px 20px; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s; display:flex; flex-direction:column; gap:8px; cursor:pointer;}
+  .cert-card:hover{box-shadow:var(--shadow-md); transform:translateY(-3px);}
+  .cert-badge{width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px; color:#fff; margin-bottom:6px;}
+  .cert-badge.azure{background:#0078D4;}
+  .cert-badge.oracle{background:#C74634;}
+  .cert-badge.ibm{background:#052FAD;}
+  .cert-card h4{font-size:15px; font-weight:600;}
+  .cert-card p{font-size:13.5px; color:var(--ink-secondary);}
+  .cert-detail-btn{font-size:12.5px; font-weight:600; color:var(--primary); margin-top:2px;}
 
-        .project-grid { display:grid; grid-template-columns:1fr; gap:18px; }
-        @media(min-width:640px){ .project-grid { grid-template-columns:repeat(2,1fr); } }
-        .project-card {
-            background: var(--bg-glass); border:1px solid var(--border-subtle); border-radius: var(--radius-lg);
-            padding: 24px 22px; cursor:pointer; backdrop-filter: blur(12px);
-            transition: transform 0.35s, box-shadow 0.35s; display: flex; flex-direction: column; gap: 12px;
-        }
-        .project-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg), var(--shadow-glow-blue); }
-        .project-icon { width:38px; height:38px; border-radius:9px; background: rgba(45,130,183,0.08); display:flex; align-items:center; justify-content:center; color: var(--accent-blue); font-weight:700; font-size:14px; }
-        .project-card h3 { font-size:16px; font-weight:700; }
-        .project-card p { color: var(--ink-secondary); font-size:13.5px; }
-        .project-tag { font-family: var(--font-mono); font-size:10px; background: rgba(45,130,183,0.08); color: var(--accent-blue); padding:4px 9px; border-radius:5px; align-self: flex-start; }
-        .view-more { margin-top: auto; font-size:12.5px; font-weight:600; color: var(--accent-blue); display:inline-flex; align-items:center; gap:5px; }
-        .view-more svg { width:11px; height:11px; transition: transform 0.3s; }
-        .project-card:hover .view-more svg { transform: translateX(3px); }
+  /* CONTACT */
+  .contact-simple{text-align:center; max-width:640px; margin:0 auto;}
+  .contact-simple .side-block{margin-bottom:22px;}
+  .contact-simple h4{font-size:12.5px; text-transform:uppercase; letter-spacing:.06em; color:var(--ink-muted); margin-bottom:6px; font-weight:600;}
+  .contact-simple a, .contact-simple p{font-size:16px; color:var(--ink); font-weight:500;}
+  .contact-simple a:hover{color:var(--primary);}
 
-        /* ── MODALS ── */
-        .modal-overlay { position:fixed; inset:0; z-index:200; background: rgba(0,0,0,0.55); backdrop-filter: blur(10px); display:flex; align-items:center; justify-content:center; padding:18px; opacity:0; visibility:hidden; transition: opacity 0.38s; }
-        .modal-overlay.open { opacity:1; visibility:visible; }
-        .modal-box { background: #fff; border-radius: var(--radius-xl); max-width:560px; width:100%; max-height:84vh; overflow-y:auto; padding:32px; transform: translateY(24px) scale(0.97); transition: transform 0.4s; box-shadow: 0 20px 56px rgba(0,0,0,0.15); border:1px solid rgba(0,0,0,0.05); }
-        .modal-overlay.open .modal-box { transform: translateY(0) scale(1); }
-        .modal-close { float:right; width:34px; height:34px; border-radius:50%; border:1px solid rgba(0,0,0,0.1); background: rgba(0,0,0,0.03); cursor:pointer; display:flex; align-items:center; justify-content:center; color: var(--ink-muted); }
-        .modal-close:hover { background: rgba(0,0,0,0.06); color: #000; }
-
-        /* Zoom modal */
-        .zoom-modal { position:fixed; inset:0; z-index:300; background: rgba(0,0,0,0.8); display:flex; align-items:center; justify-content:center; padding:24px; opacity:0; visibility:hidden; transition: opacity 0.3s; }
-        .zoom-modal.open { opacity:1; visibility:visible; }
-        .zoom-modal img { max-width:90%; max-height:85vh; border-radius: 12px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); cursor: zoom-out; }
-        .zoom-close { position: absolute; top: 24px; right: 24px; background: rgba(255,255,255,0.2); border: none; color: #fff; font-size: 28px; width: 44px; height: 44px; border-radius: 50%; display: flex; align-items: center; justify-content: center; cursor: pointer; }
-
-        /* ── SKILLS ── */
-        .skills-grid { display:grid; grid-template-columns:1fr; gap:16px; }
-        @media(min-width:700px){ .skills-grid { grid-template-columns:repeat(2,1fr); } }
-        @media(min-width:1000px){ .skills-grid { grid-template-columns:repeat(3,1fr); } }
-        .skill-group { background: var(--bg-glass); border:1px solid var(--border-subtle); border-radius: var(--radius-lg); padding:22px 20px; backdrop-filter: blur(12px); }
-        .skill-group h4 { font-family: var(--font-mono); font-size:10.5px; color: var(--accent-cyan); margin-bottom:14px; }
-        .chip-row { display:flex; flex-wrap:wrap; gap:7px; }
-        .chip { font-size:12.5px; background: rgba(0,0,0,0.025); padding:6px 12px; border-radius:999px; border:1px solid rgba(0,0,0,0.06); }
-        .chip.core { background: rgba(45,130,183,0.1); border-color: rgba(45,130,183,0.25); color: var(--accent-blue); font-weight:600; }
-        .core-tech-row { display:flex; flex-wrap:wrap; gap:10px; justify-content:center; margin-bottom:32px; }
-
-        /* ── PUBLICATION (enlarged image) ── */
-        .pub-strip {
-            background: linear-gradient(135deg, #e6f0f7, #dce8f2); border-radius: var(--radius-xl);
-            padding: 36px; display: grid; gap: 28px; grid-template-columns: 1fr;
-            border:1px solid rgba(0,0,0,0.04); box-shadow: var(--shadow-md);
-        }
-        @media(min-width:820px){ .pub-strip { grid-template-columns: 1.3fr 1fr; align-items: center; } }
-        .pub-image-col img { max-width: 100%; border-radius: 12px; box-shadow: var(--shadow-md); cursor: zoom-in; width: 100%; height: auto; }
-        .pub-image-col .img-placeholder { display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--ink-muted); font-family: var(--font-mono); font-size: 10px; }
-        .pub-text-col { display: flex; flex-direction: column; gap: 12px; }
-        .pub-badge { font-family: var(--font-mono); font-size:10px; background: rgba(45,130,183,0.12); color: var(--accent-blue); padding:8px 14px; border-radius:7px; align-self: flex-start; }
-        .pub-strip h3 { font-size: clamp(17px,2vw,20px); font-weight:700; }
-        .pub-strip p { color: var(--ink-secondary); font-size:14px; }
-
-        /* ── CERTIFICATIONS ── */
-        .cert-grid { display:grid; grid-template-columns:1fr; gap:14px; }
-        @media(min-width:700px){ .cert-grid { grid-template-columns:repeat(3,1fr); } }
-        .cert-card { background: var(--bg-glass); border:1px solid var(--border-subtle); border-radius: var(--radius-lg); padding:22px 20px; backdrop-filter: blur(12px); transition: transform 0.35s, box-shadow 0.35s; }
-        .cert-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md), var(--shadow-glow-blue); }
-        .cert-card.featured-cert { border-color: rgba(45,130,183,0.3); }
-        .cert-icon { width:38px; height:38px; border-radius:9px; background: rgba(45,130,183,0.1); display:flex; align-items:center; justify-content:center; color: var(--accent-blue); font-weight:700; margin-bottom:14px; }
-
-        /* ── CONTACT (no form) ── */
-        .contact-simple { text-align: center; }
-        .contact-simple .side-block { margin-bottom: 24px; }
-        .contact-simple h4 { font-family: var(--font-mono); font-size:10px; color: var(--accent-cyan); margin-bottom:6px; }
-        .contact-simple a, .contact-simple p { font-size:15px; color: var(--ink-secondary); }
-        .contact-simple .around-web { display:flex; gap:12px; justify-content:center; margin-top:8px; }
-
-        footer { background: rgba(0,0,0,0.02); border-top:1px solid rgba(0,0,0,0.04); padding:26px 0; }
-        .footer-bottom { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:10px; font-size:12.5px; color: var(--ink-muted); }
-        .footer-bottom a { color: var(--ink-muted); }
-        .footer-bottom a:hover { color: var(--accent-blue); }
-
-        @media(max-width:480px){
-            .hero-actions .btn { width:100%; justify-content:center; }
-            .hero-photo-wrapper { max-width:160px; }
-        }
-    </style>
+  footer{background:var(--dark-bg); color:rgba(255,255,255,0.55); padding:28px 0;}
+  .footer-bottom{display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; font-size:13px;}
+  .footer-bottom a{color:rgba(255,255,255,0.75);}
+  .footer-bottom a:hover{color:#fff;}
+</style>
 </head>
 <body>
-    <header class="site-nav" id="siteNav">
-        <div class="nav-inner">
-            <a href="#top" class="logo-mark">Manav Shah</a>
-            <nav class="links">
-                <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a>
-                <a href="#expertise">Expertise</a><a href="#research">Publication</a><a href="#contact">Contact</a>
-            </nav>
-            <div style="display:flex; align-items:center; gap:10px;">
-                <!-- REPLACE with your actual resume PDF path -->
-                <a class="btn btn-primary nav-cta" href="assets/Manav_Shah_Resume.pdf" download>Resume</a>
-                <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu"><span></span><span></span><span></span></button>
-            </div>
-        </div>
-    </header>
 
-    <div class="mobile-menu" id="mobileMenu">
-        <a href="#about">About</a><a href="#experience">Experience</a><a href="#projects">Projects</a>
-        <a href="#expertise">Expertise</a><a href="#research">Publication</a><a href="#contact">Contact</a>
-        <a class="btn btn-primary" href="assets/Manav_Shah_Resume.pdf" download>Download Resume</a>
+<header class="site-nav" id="siteNav">
+  <div class="nav-inner">
+    <a href="#top" class="logo-mark">Manav Shah</a>
+    <nav class="links" aria-label="Primary">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#expertise">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <a class="btn btn-primary nav-cta" href="assets/Manav_Shah_Resume.pdf" download>Resume</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </div>
+</header>
 
-    <main id="top">
-        <!-- HERO -->
-        <section class="hero">
-            <div class="hero-bg-img" aria-hidden="true"></div>
-            <div class="hero-overlay" aria-hidden="true"></div>
-            <div class="wrap hero-inner">
-                <div class="hero-text-col">
-                    <div class="hero-badge"><span class="badge-dot"></span> Open to Opportunities</div>
-                    <h1>Manav Shah</h1>
-                    <div class="role">Software Engineer</div>
-                    <p class="lead">Building AI-powered automation, software applications, and data-driven solutions — from Salesforce workflows to OCR-driven document intelligence.</p>
-                    <div class="hero-keywords"><span class="kw">Python</span><span class="kw">AI</span><span class="kw">Automation</span><span class="kw">Cloud</span><span class="kw">Salesforce</span><span class="kw">OCR</span></div>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary" href="#projects">View Projects</a>
-                        <a class="btn btn-outline-blue" href="assets/Manav_Shah_Resume.pdf" download>Resume</a>
-                    </div>
-                    <div class="hero-social-row">
-                        <a class="social-circle linkedin" href="https://www.linkedin.com/in/manav-shah-bb8b7a271" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7 0h3.8v2.04h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8z"/></svg></a>
-                        <a class="social-circle github" href="https://github.com/Mannav1104" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11.5 11.5 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.5 5.7 18.3.5 12 .5z"/></svg></a>
-                        <a class="social-circle email" href="mailto:manav.it11@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke-linejoin="round"/><path d="m4 6 8 7 8-7" stroke-linejoin="round"/></svg></a>
-                    </div>
-                </div>
-                <div class="hero-photo-col">
-                    <div class="hero-photo-wrapper">
-                        <div class="hero-photo-frame-decor"></div>
-                        <div class="hero-photo-glow"></div>
-                        <!-- Add your photo at images/manav.jpg -->
-                        <div class="hero-photo-placeholder"><span>📷</span><span>Add photo<br>images/manav.jpg</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about">About</a>
+  <a href="#experience">Experience</a>
+  <a href="#projects">Projects</a>
+  <a href="#expertise">Skills</a>
+  <a href="#contact">Contact</a>
+  <a class="btn btn-primary" href="assets/Manav_Shah_Resume.pdf" download>Download Resume</a>
+</div>
 
-        <!-- ABOUT -->
-        <section id="about" class="alt">
-            <div class="wrap">
-                <div class="section-head reveal"><span class="eyebrow">About</span><h2>Building at the intersection of AI and enterprise systems</h2></div>
-                <div class="about-grid">
-                    <div class="about-text reveal">
-                        <p>I'm an Information Technology graduate with hands-on experience across Salesforce administration, AI-driven automation, and full-stack development. At Zeta-V Technology Solutions, I work on Salesforce configuration, Apex development, data management, and reporting, alongside building React and Node.js interfaces.</p>
-                        <p>As an AI Research Intern at Code4Bots, I researched automation opportunities for companies like Zomato and Zerodha and helped design enterprise-specific AI copilots. My final-year project, Parchify, combines OCR and human-in-the-loop validation to process invoices — published in the International Journal of Computer Applications.</p>
-                        <a class="btn btn-outline-blue" href="assets/Manav_Shah_Resume.pdf" download>Download Resume</a>
-                    </div>
-                    <div class="about-metrics reveal">
-                        <div class="metric-card"><div class="metric-number">02</div><div class="metric-label">Internship Experiences</div></div>
-                        <div class="metric-card"><div class="metric-number">03</div><div class="metric-label">Featured Projects</div></div>
-                        <div class="metric-card"><div class="metric-number gold">03</div><div class="metric-label">Certifications</div></div>
-                        <div class="metric-card"><div class="metric-number gold">01</div><div class="metric-label">Research Publication</div></div>
-                    </div>
-                </div>
-            </div>
-        </section>
+<main id="top">
 
-        <!-- EXPERIENCE -->
-        <section id="experience">
-            <div class="wrap">
-                <div class="section-head reveal"><span class="eyebrow">Experience</span><h2>Where I've worked</h2></div>
-                <div class="trace">
-                    <div class="trace-item reveal"><div class="trace-node"></div><div class="role-title">Software Engineering Intern</div><div class="role-meta">Zeta-V Technology Solutions Limited · Jan 2026 — Jul 2026</div><ul><li>Completed 4-month Salesforce Administrator training; built Lightning components with Apex.</li><li>Used Python to clean and validate 500+ Salesforce records, improving data accuracy.</li><li>Built responsive UI components with React.js and Bootstrap; supported Node.js backend.</li><li>Collaborated in an agile team on planning, code reviews, and troubleshooting.</li></ul></div>
-                    <div class="trace-item alt-node reveal"><div class="trace-node"></div><div class="role-title">AI Research Intern</div><div class="role-meta">Code4Bots Pvt. Ltd. · Feb 2025 — Apr 2025</div><ul><li>Researched workflows at Zomato and Zerodha to identify AI-driven automation opportunities.</li><li>Co-designed enterprise-specific AI copilots tailored to client business processes.</li><li>Authored research documentation on AI implementation strategy and feasibility analysis.</li></ul></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- PROJECTS -->
-        <section id="projects" class="alt">
-            <div class="wrap">
-                <div class="section-head reveal"><span class="eyebrow">Projects</span><h2>Selected work</h2><p>Click any project for details.</p></div>
-                <div class="featured-project reveal">
-                    <span class="project-tag">Featured Project · Published Research</span>
-                    <h3>Parchify — AI-Powered Invoice Processing Platform</h3>
-                    <p>AI-powered invoice digitization platform combining OCR, document processing, validation, and automation.</p>
-                    <ul><li>Led a 4-member team — OCR-based invoice extraction with image preprocessing</li><li>Human-in-the-loop validation workflow with SQL storage and Excel/PDF export</li></ul>
-                    <div class="modal-tech"><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">Google Cloud Vision</span><span class="chip">SQL</span></div>
-                    <button class="featured-cta" data-modal="modal-parchify">View Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
-                </div>
-                <div class="project-grid">
-                    <button class="project-card reveal" data-modal="modal-sf"><span class="project-tag">Salesforce</span><div class="project-icon">SF</div><h3>Salesforce CRM Management</h3><p>Apex, Lightning Components, Flows, and Process Builder automation.</p><span class="view-more">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-                    <button class="project-card reveal" data-modal="modal-genai"><span class="project-tag">Generative AI</span><div class="project-icon">AI</div><h3>GenAI Content & Post Generator</h3><p>Groq + Llama 3.1 writing assistant with style analysis.</p><span class="view-more">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></button>
-                </div>
-            </div>
-        </section>
-
-        <!-- TECHNICAL EXPERTISE -->
-        <section id="expertise">
-            <div class="wrap">
-                <div class="section-head reveal"><span class="eyebrow">Technical Expertise</span><h2>Tools & technologies</h2></div>
-                <div class="core-tech-row reveal"><span class="chip core">Python</span><span class="chip core">SQL</span><span class="chip core">Salesforce</span><span class="chip core">Apex</span><span class="chip core">React</span><span class="chip core">Node.js</span><span class="chip core">AI/OCR</span><span class="chip core">Cloud</span></div>
-                <div class="skills-grid">
-                    <div class="skill-group reveal"><h4>Core Development</h4><div class="chip-row"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div></div>
-                    <div class="skill-group reveal"><h4>Frontend & Backend</h4><div class="chip-row"><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">HTML5</span><span class="chip">CSS3</span></div></div>
-                    <div class="skill-group reveal"><h4>Enterprise / Salesforce</h4><div class="chip-row"><span class="chip">Administration</span><span class="chip">Apex</span><span class="chip">Lightning</span><span class="chip">Flows</span></div></div>
-                    <div class="skill-group reveal"><h4>AI & Data</h4><div class="chip-row"><span class="chip">Machine Learning</span><span class="chip">OCR</span><span class="chip">OpenCV</span><span class="chip">Document AI</span></div></div>
-                    <div class="skill-group reveal"><h4>Cloud</h4><div class="chip-row"><span class="chip">Microsoft Azure</span><span class="chip">Oracle Cloud</span></div></div>
-                    <div class="skill-group reveal"><h4>Automation & Tools</h4><div class="chip-row"><span class="chip">UiPath</span><span class="chip">Git</span><span class="chip">VS Code</span></div></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- RESEARCH (with enlarged publication image) -->
-        <section id="research" class="alt">
-            <div class="wrap">
-                <div class="section-head reveal"><span class="eyebrow">Research & Publication</span><h2>Published work</h2></div>
-                <div class="pub-strip reveal">
-                    <div class="pub-image-col">
-                        <!-- Replace with your publication image: images/publication.jpg -->
-                        <img src="images/publication.jpg" alt="IJCA Publication" id="pubImage" style="cursor:zoom-in;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                        <div class="img-placeholder" style="display:none;">📄<span>Add publication image<br>images/publication.jpg</span></div>
-                    </div>
-                    <div class="pub-text-col">
-                        <span class="pub-badge">IJCA · 2025</span>
-                        <h3>Vendor-Agnostic Invoice Processing Framework Integrating OCR, Canonical Modeling, and Human-in-the-Loop Validation</h3>
-                        <p>Published in the International Journal of Computer Applications. Proposes a vendor-independent approach for extracting and standardizing invoice data with human-in-the-loop validation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CERTIFICATIONS -->
-        <section id="certifications">
-            <div class="wrap">
-                <div class="section-head reveal"><span class="eyebrow">Certifications</span><h2>Credentials</h2></div>
-                <div class="cert-grid">
-                    <div class="cert-card featured-cert reveal"><div class="cert-icon">AZ</div><h4>Microsoft Azure Fundamentals</h4><p>AZ-900 · Score 985/1000</p></div>
-                    <div class="cert-card reveal"><div class="cert-icon">OCI</div><h4>Oracle Cloud Infrastructure</h4><p>AI Foundations Associate · 2025</p></div>
-                    <div class="cert-card reveal"><div class="cert-icon">IBM</div><h4>IBM SkillsBuild</h4><p>AI Fundamentals · Certified</p></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CONTACT (no form) -->
-        <section id="contact" class="alt">
-            <div class="wrap contact-simple reveal">
-                <div class="section-head"><span class="eyebrow">Contact</span><h2>Get in touch</h2></div>
-                <div class="side-block"><h4>Email</h4><a href="mailto:manav.it11@gmail.com">manav.it11@gmail.com</a></div>
-                <div class="side-block"><h4>Phone</h4><a href="tel:+918623085183">+91 8623085183</a></div>
-                <div class="side-block"><h4>Location</h4><p>Pune, Maharashtra, India</p></div>
-                <div class="side-block"><h4>Around the Web</h4><div class="around-web">
-                    <a class="social-circle linkedin" href="https://www.linkedin.com/in/manav-shah-bb8b7a271" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7 0h3.8v2.04h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8z"/></svg></a>
-                    <a class="social-circle github" href="https://github.com/Mannav1104" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11.5 11.5 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.5 5.7 18.3.5 12 .5z"/></svg></a>
-                    <a class="social-circle email" href="mailto:manav.it11@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke-linejoin="round"/><path d="m4 6 8 7 8-7" stroke-linejoin="round"/></svg></a>
-                </div></div>
-                <a class="btn btn-primary" href="assets/Manav_Shah_Resume.pdf" download style="margin-top:20px;">Download Resume</a>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="wrap footer-bottom">
-            <div><strong>Manav Shah</strong> · Software Engineer</div>
-            <div>© 2026 · <a href="mailto:manav.it11@gmail.com">Email</a> · <a href="https://linkedin.com/in/manav-shah-bb8b7a271">LinkedIn</a></div>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-text-col">
+        <div class="hero-badge">Open to Opportunities</div>
+        <h1>Manav Shah</h1>
+        <div class="role">Software Engineer — Salesforce &amp; AI Automation</div>
+        <p class="lead">
+          I build Salesforce solutions and AI-driven automation — from enterprise
+          workflows and Apex to OCR-powered document intelligence.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View Projects</a>
+          <a class="btn btn-outline" href="assets/Manav_Shah_Resume.pdf" download>Resume</a>
         </div>
-    </footer>
-
-    <!-- Project modals -->
-    <div class="modal-overlay" id="modal-parchify"><div class="modal-box"><button class="modal-close" data-close>✕</button><span class="project-tag">Final Year · Published</span><h3>Parchify — AI Invoice Processing</h3><ul><li>Led 4-member team, integrated OCR with OpenCV & Google Cloud Vision.</li><li>Human-in-the-loop validation, SQL storage, Excel/PDF export.</li></ul><div class="modal-tech"><span class="tech-chip">Python</span><span class="tech-chip">OpenCV</span><span class="tech-chip">Google Cloud Vision</span><span class="tech-chip">SQL</span></div></div></div>
-    <div class="modal-overlay" id="modal-sf"><div class="modal-box"><button class="modal-close" data-close>✕</button><span class="project-tag">Salesforce</span><h3>Salesforce CRM Management</h3><ul><li>Configured users, roles, profiles, permission sets.</li><li>Developed Apex classes, triggers, Lightning Components.</li><li>Created reports/dashboards and Flow automation.</li></ul><div class="modal-tech"><span class="tech-chip">Apex</span><span class="tech-chip">Lightning</span><span class="tech-chip">Flows</span></div></div></div>
-    <div class="modal-overlay" id="modal-genai"><div class="modal-box"><button class="modal-close" data-close>✕</button><span class="project-tag">Generative AI</span><h3>GenAI Content Generator</h3><ul><li>Groq API + Llama 3.1 writing assistant.</li><li>Style analysis, tone customization, topic recommendations, PDF export.</li></ul><div class="modal-tech"><span class="tech-chip">JavaScript</span><span class="tech-chip">Groq</span><span class="tech-chip">Llama 3.1</span></div></div></div>
-
-    <!-- Zoom modal for publication image -->
-    <div class="zoom-modal" id="zoomModal">
-        <button class="zoom-close" id="zoomClose">✕</button>
-        <img src="" alt="Publication zoom" id="zoomImage">
+        <div class="hero-social-row">
+          <a class="social-circle" href="https://www.linkedin.com/in/manav-shah-bb8b7a271" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7 0h3.8v2.04h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8z"/></svg>
+          </a>
+          <a class="social-circle" href="https://github.com/Mannav1104" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11.5 11.5 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.5 5.7 18.3.5 12 .5z"/></svg>
+          </a>
+          <a class="social-circle" href="mailto:manav.it11@gmail.com" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke-linejoin="round"/><path d="m4 6 8 7 8-7" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="hero-photo-col">
+        <div class="hero-photo-wrapper">
+          <div class="hero-photo-frame-decor"></div>
+          <img class="hero-photo" src="images/manav.png" alt="Manav Shah" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="hero-photo-placeholder" style="display:none;">Add photo<br>images/manav.png</div>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <script>
-        // Scroll reveal
-        const io = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold: 0.08 });
-        document.querySelectorAll('.reveal, .trace-item').forEach(el => io.observe(el));
+  <!-- ABOUT -->
+  <section id="about" class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">About</span>
+        <h2>Salesforce development, applied AI</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <p>
+            I'm an Information Technology graduate with hands-on experience across Salesforce
+            administration, AI-driven automation, and full-stack development. At Zeta-V
+            Technology Solutions, I work on Salesforce configuration, Apex development, data
+            management, and reporting, alongside building React and Node.js interfaces.
+          </p>
+          <p>
+            As an AI Research Intern at Code4Bots, I researched automation opportunities for
+            companies like Zomato and Zerodha and helped design enterprise-specific AI
+            copilots. My final-year project, Parchify, combines OCR and human-in-the-loop
+            validation to process invoices — published in the International Journal of
+            Computer Applications.
+          </p>
+          <a class="btn btn-outline" href="assets/Manav_Shah_Resume.pdf" download>Download Resume</a>
+        </div>
+        <div class="fact-card reveal" style="--d:.1s">
+          <div class="fact-row"><span class="fact-label">Location</span><span class="fact-value">Pune, India</span></div>
+          <div class="fact-row"><span class="fact-label">Current Role</span><span class="fact-value">Software Engineering Intern, Zeta-V</span></div>
+          <div class="fact-row"><span class="fact-label">Education</span><span class="fact-value">B.E. Information Technology<br>NBN Sinhgad School of Engineering</span></div>
+          <div class="fact-row"><span class="fact-label">Graduation</span><span class="fact-value">2026 · CGPA 7.68/10</span></div>
+          <div class="fact-row"><span class="fact-label">Focus</span><span class="fact-value">Salesforce · AI Automation</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Nav scroll effect
-        const siteNav = document.getElementById('siteNav');
-        window.addEventListener('scroll', () => { siteNav.classList.toggle('scrolled', window.scrollY > 40); }, { passive: true });
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Experience</span>
+        <h2>Where I've worked</h2>
+      </div>
+      <div class="trace">
+        <div class="trace-item reveal">
+          <div class="trace-node"></div>
+          <div class="role-title">Software Engineering Intern</div>
+          <div class="role-meta">Zeta-V Technology Solutions Limited · Jan 2026 — Jun 2026</div>
+          <ul>
+            <li>Completed 4-month Salesforce Administrator training; built Lightning components with Apex.</li>
+            <li>Used Python to clean and validate 500+ Salesforce records, improving data accuracy.</li>
+            <li>Built responsive UI components with React.js and Bootstrap; supported Node.js backend.</li>
+            <li>Collaborated in an agile team on planning, code reviews, and troubleshooting.</li>
+          </ul>
+        </div>
+        <div class="trace-item reveal" style="--d:.1s">
+          <div class="trace-node"></div>
+          <div class="role-title">AI Research Intern</div>
+          <div class="role-meta">Code4Bots Pvt. Ltd. · Feb 2025 — Apr 2025</div>
+          <ul>
+            <li>Researched workflows at Zomato and Zerodha to identify AI-driven automation opportunities.</li>
+            <li>Co-designed enterprise-specific AI copilots tailored to client business processes.</li>
+            <li>Authored research documentation on AI implementation strategy and feasibility analysis.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Mobile menu
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        function closeMenu(){ menuBtn.setAttribute('aria-expanded','false'); mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
-        menuBtn.addEventListener('click', () => {
-            const open = menuBtn.getAttribute('aria-expanded') === 'true';
-            menuBtn.setAttribute('aria-expanded', String(!open));
-            mobileMenu.classList.toggle('open', !open);
-            document.body.style.overflow = open ? '' : 'hidden';
-        });
-        mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  <!-- PROJECTS -->
+  <section id="projects" class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Projects</span>
+        <h2>Selected work</h2>
+      </div>
+      <div class="featured-project reveal">
+        <span class="project-tag">Featured Project · Published Research</span>
+        <h3>Parchify — AI-Powered Invoice Processing Platform</h3>
+        <p>AI-powered invoice digitization platform combining OCR, document processing, validation, and automation.</p>
+        <ul>
+          <li>Led a 4-member team — OCR-based invoice extraction with image preprocessing</li>
+          <li>Human-in-the-loop validation workflow with SQL storage and Excel/PDF export</li>
+        </ul>
+        <div class="modal-tech"><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">Google Cloud Vision</span><span class="chip">SQL</span></div>
+        <button class="featured-cta" data-modal="modal-parchify">View Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+      <div class="project-grid">
+        <button class="project-card reveal" data-modal="modal-sf">
+          <span class="project-tag">Salesforce</span>
+          <div class="project-icon">SF</div>
+          <h3>Salesforce CRM Management</h3>
+          <p>Apex, Lightning Components, Flows, and Process Builder automation.</p>
+          <span class="view-more">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </button>
+        <button class="project-card reveal" style="--d:.05s" data-modal="modal-genai">
+          <span class="project-tag">Generative AI</span>
+          <div class="project-icon">AI</div>
+          <h3>GenAI Content &amp; Post Generator</h3>
+          <p>Groq + Llama 3.1 writing assistant with style analysis.</p>
+          <span class="view-more">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </button>
+      </div>
+    </div>
+  </section>
 
-        // Project modals
-        document.querySelectorAll('[data-modal]').forEach(card => {
-            card.addEventListener('click', () => {
-                const modal = document.getElementById(card.getAttribute('data-modal'));
-                if(modal){ modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
-            });
-        });
-        document.querySelectorAll('.modal-overlay').forEach(overlay => {
-            overlay.addEventListener('click', (e) => { if(e.target === overlay || e.target.closest('[data-close]')){ overlay.classList.remove('open'); document.body.style.overflow = ''; } });
-        });
-        document.addEventListener('keydown', (e) => { if(e.key === 'Escape'){ document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open')); document.body.style.overflow = ''; } });
+  <!-- SKILLS -->
+  <section id="expertise">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Skills</span>
+        <h2>What I work with</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-group reveal">
+          <h4>Languages &amp; Web</h4>
+          <div class="chip-row"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">HTML5 &amp; CSS3</span></div>
+        </div>
+        <div class="skill-group reveal" style="--d:.05s">
+          <h4>Salesforce</h4>
+          <div class="chip-row"><span class="chip">Administration</span><span class="chip">Apex</span><span class="chip">Lightning Components</span><span class="chip">Flows</span></div>
+        </div>
+        <div class="skill-group reveal" style="--d:.1s">
+          <h4>AI &amp; Automation</h4>
+          <div class="chip-row"><span class="chip">OCR</span><span class="chip">OpenCV</span><span class="chip">Document AI</span><span class="chip">Data Analytics</span></div>
+        </div>
+        <div class="skill-group reveal" style="--d:.15s">
+          <h4>Cloud &amp; Tools</h4>
+          <div class="chip-row"><span class="chip">Microsoft Azure</span><span class="chip">Oracle Cloud Infrastructure</span><span class="chip">Git</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Publication image zoom
-        const pubImage = document.getElementById('pubImage');
-        const zoomModal = document.getElementById('zoomModal');
-        const zoomImage = document.getElementById('zoomImage');
-        const zoomClose = document.getElementById('zoomClose');
-        if(pubImage){
-            pubImage.addEventListener('click', () => {
-                zoomImage.src = pubImage.src;
-                zoomModal.classList.add('open');
-                document.body.style.overflow = 'hidden';
-            });
-        }
-        zoomClose.addEventListener('click', () => { zoomModal.classList.remove('open'); document.body.style.overflow = ''; });
-        zoomModal.addEventListener('click', (e) => { if(e.target === zoomModal){ zoomModal.classList.remove('open'); document.body.style.overflow = ''; } });
-        document.addEventListener('keydown', (e) => { if(e.key === 'Escape' && zoomModal.classList.contains('open')){ zoomModal.classList.remove('open'); document.body.style.overflow = ''; } });
-    </script>
+  <!-- RESEARCH (dark anchor section) -->
+  <section id="research" class="dark">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Research &amp; Publication</span>
+        <h2>Published work</h2>
+      </div>
+      <div class="pub-strip reveal">
+        <div class="pub-image-col">
+          <img src="images/publication.png" alt="IJCA Publication" id="pubImage" style="cursor:zoom-in;" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <div class="pub-image-placeholder" style="display:none;">Add publication image<br>images/publication.png</div>
+        </div>
+        <div class="pub-text-col">
+          <span class="pub-badge">IJCA · 2025</span>
+          <h3>Vendor-Agnostic Invoice Processing Framework Integrating OCR, Canonical Modeling, and Human-in-the-Loop Validation</h3>
+          <p>Published in the International Journal of Computer Applications. Proposes a vendor-independent approach for extracting and standardizing invoice data with human-in-the-loop validation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Certifications</span>
+        <h2>Credentials</h2>
+      </div>
+      <div class="cert-grid">
+        <div class="cert-card reveal" data-cert="azure">
+          <div class="cert-badge azure">AZ</div>
+          <h4>Microsoft Azure Fundamentals</h4>
+          <p>AZ-900 · Score 985/1000</p>
+          <span class="cert-detail-btn">View Details</span>
+        </div>
+        <div class="cert-card reveal" style="--d:.05s" data-cert="oracle">
+          <div class="cert-badge oracle">OCI</div>
+          <h4>Oracle Cloud Infrastructure</h4>
+          <p>AI Foundations Associate · 2025</p>
+          <span class="cert-detail-btn">View Details</span>
+        </div>
+        <div class="cert-card reveal" style="--d:.1s" data-cert="ibm">
+          <div class="cert-badge ibm">IBM</div>
+          <h4>IBM SkillsBuild</h4>
+          <p>AI Fundamentals · Certified</p>
+          <span class="cert-detail-btn">View Details</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="alt">
+    <div class="wrap contact-simple reveal">
+      <div class="section-head"><span class="eyebrow">Contact</span><h2>Get in touch</h2></div>
+      <div class="side-block"><h4>Email</h4><a href="mailto:manav.it11@gmail.com">manav.it11@gmail.com</a></div>
+      <div class="side-block"><h4>Phone</h4><a href="tel:+918623085183">+91 8623085183</a></div>
+      <div class="side-block"><h4>Location</h4><p>Pune, Maharashtra, India</p></div>
+      <div class="side-block">
+        <h4>Around the Web</h4>
+        <div style="display:flex; gap:12px; justify-content:center;">
+          <a class="social-circle" href="https://www.linkedin.com/in/manav-shah-bb8b7a271" target="_blank" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.11 1 2.48 1 4.98 2.12 4.98 3.5zM.5 8h4V23h-4V8zm7 0h3.8v2.04h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V23h-4v-6.9c0-1.65-.03-3.77-2.3-3.77-2.3 0-2.65 1.8-2.65 3.65V23h-4V8z"/></svg></a>
+          <a class="social-circle" href="https://github.com/Mannav1104" target="_blank" aria-label="GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11.5 11.5 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.5 5.7 18.3.5 12 .5z"/></svg></a>
+          <a class="social-circle" href="mailto:manav.it11@gmail.com" aria-label="Email"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z" stroke-linejoin="round"/><path d="m4 6 8 7 8-7" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="assets/Manav_Shah_Resume.pdf" download style="margin-top:20px;">Download Resume</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap footer-bottom">
+    <div><strong style="color:#fff;">Manav Shah</strong> · Software Engineer</div>
+    <div>© 2026 · <a href="mailto:manav.it11@gmail.com">Email</a> · <a href="https://linkedin.com/in/manav-shah-bb8b7a271">LinkedIn</a></div>
+  </div>
+</footer>
+
+<!-- Project modals -->
+<div class="modal-overlay" id="modal-parchify"><div class="modal-box"><button class="modal-close" data-close>✕</button><span class="project-tag">Final Year · Published</span><h3>Parchify — AI Invoice Processing</h3><ul><li>Led 4-member team, integrated OCR with OpenCV &amp; Google Cloud Vision.</li><li>Human-in-the-loop validation, SQL storage, Excel/PDF export.</li></ul><div class="modal-tech"><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">Google Cloud Vision</span><span class="chip">SQL</span></div></div></div>
+<div class="modal-overlay" id="modal-sf"><div class="modal-box"><button class="modal-close" data-close>✕</button><span class="project-tag">Salesforce</span><h3>Salesforce CRM Management</h3><ul><li>Configured users, roles, profiles, permission sets.</li><li>Developed Apex classes, triggers, Lightning Components.</li><li>Created reports/dashboards and Flow automation.</li></ul><div class="modal-tech"><span class="chip">Apex</span><span class="chip">Lightning</span><span class="chip">Flows</span></div></div></div>
+<div class="modal-overlay" id="modal-genai"><div class="modal-box"><button class="modal-close" data-close>✕</button><span class="project-tag">Generative AI</span><h3>GenAI Content Generator</h3><ul><li>Groq API + Llama 3.1 writing assistant.</li><li>Style analysis, tone customization, topic recommendations, PDF export.</li></ul><div class="modal-tech"><span class="chip">JavaScript</span><span class="chip">Groq</span><span class="chip">Llama 3.1</span></div></div></div>
+
+<!-- Zoom modal for publication image -->
+<div class="zoom-modal" id="zoomModal" style="position:fixed; inset:0; z-index:300; background:rgba(0,0,0,0.9); display:flex; align-items:center; justify-content:center; padding:24px; opacity:0; visibility:hidden; transition:opacity .3s;">
+  <button class="zoom-close" id="zoomClose" style="position:absolute; top:20px; right:20px; width:40px; height:40px; border-radius:50%; border:1px solid rgba(255,255,255,0.3); background:rgba(255,255,255,0.1); color:#fff; font-size:16px;">✕</button>
+  <img src="" alt="Publication zoom" id="zoomImage" style="max-width:100%; max-height:90vh; border-radius:8px;">
+</div>
+
+<!-- Certification detail modal -->
+<div class="modal-overlay" id="certModal">
+  <div class="modal-box">
+    <button class="modal-close" data-close>✕</button>
+    <h3 id="certModalTitle"></h3>
+    <p id="certModalDesc" style="color:var(--ink-secondary); line-height:1.7; margin-top:12px;"></p>
+  </div>
+</div>
+
+<div style="display:none;">
+  <div id="cert-detail-azure">Microsoft Azure Fundamentals (AZ-900) validates foundational knowledge of cloud concepts, Azure services, Azure workloads, security, privacy, compliance, and pricing. Scored 985/1000. Certified by Microsoft.</div>
+  <div id="cert-detail-oracle">Oracle Cloud Infrastructure 2025 AI Foundations Associate demonstrates expertise in AI/ML fundamentals, OCI AI services, and data science capabilities on Oracle Cloud.</div>
+  <div id="cert-detail-ibm">IBM SkillsBuild AI Fundamentals covers artificial intelligence concepts, machine learning, deep learning, and ethical AI practices. Earned through IBM's digital learning platform.</div>
+</div>
+
+<script>
+  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold:0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  function closeMenu(){ menuBtn.setAttribute('aria-expanded','false'); mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
+  menuBtn.addEventListener('click', () => {
+    const open = menuBtn.getAttribute('aria-expanded') === 'true';
+    menuBtn.setAttribute('aria-expanded', String(!open));
+    mobileMenu.classList.toggle('open', !open);
+    document.body.style.overflow = open ? '' : 'hidden';
+  });
+  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  document.querySelectorAll('[data-modal]').forEach(card => {
+    card.addEventListener('click', () => {
+      const modal = document.getElementById(card.getAttribute('data-modal'));
+      if(modal){ modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    });
+  });
+  document.querySelectorAll('.modal-overlay').forEach(overlay => {
+    overlay.addEventListener('click', (e) => { if(e.target === overlay || e.target.closest('[data-close]')){ overlay.classList.remove('open'); document.body.style.overflow = ''; } });
+  });
+  document.addEventListener('keydown', (e) => { if(e.key === 'Escape'){ document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open')); document.body.style.overflow = ''; if(zoomModal.style.visibility==='visible'){ zoomModal.style.opacity=0; zoomModal.style.visibility='hidden'; document.body.style.overflow=''; } } });
+
+  const pubImage = document.getElementById('pubImage');
+  const zoomModal = document.getElementById('zoomModal');
+  const zoomImage = document.getElementById('zoomImage');
+  const zoomClose = document.getElementById('zoomClose');
+  if(pubImage){
+    pubImage.addEventListener('click', () => {
+      zoomImage.src = pubImage.src;
+      zoomModal.style.opacity = 1; zoomModal.style.visibility = 'visible';
+      document.body.style.overflow = 'hidden';
+    });
+  }
+  function closeZoom(){ zoomModal.style.opacity = 0; zoomModal.style.visibility = 'hidden'; document.body.style.overflow = ''; }
+  zoomClose.addEventListener('click', closeZoom);
+  zoomModal.addEventListener('click', (e) => { if(e.target === zoomModal) closeZoom(); });
+
+  const certModal = document.getElementById('certModal');
+  const certModalTitle = document.getElementById('certModalTitle');
+  const certModalDesc = document.getElementById('certModalDesc');
+  document.querySelectorAll('.cert-card').forEach(card => {
+    card.addEventListener('click', () => {
+      const certType = card.getAttribute('data-cert');
+      const detailDiv = document.getElementById(`cert-detail-${certType}`);
+      if(detailDiv){
+        certModalTitle.textContent = card.querySelector('h4').textContent;
+        certModalDesc.textContent = detailDiv.textContent;
+        certModal.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+</script>
 </body>
 </html>
