@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Manav Shah — Software Engineer | Salesforce & AI Automation</title>
-<meta name="description" content="Portfolio of Manav Shah — Software Engineer building Salesforce solutions and AI-driven automation.">
+<title>Manav Shah — Software Engineer | Salesforce, Python & AI Automation</title>
+<meta name="description" content="Portfolio of Manav Shah — Software Engineer building Salesforce solutions, Python automation, and AI-driven document intelligence.">
 <meta property="og:title" content="Manav Shah — Software Engineer Portfolio">
-<meta property="og:description" content="Salesforce development and AI-driven automation, from enterprise workflows to document intelligence.">
+<meta property="og:description" content="Salesforce development, Python automation, AI research, and document intelligence — from enterprise workflows to OCR-powered systems.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -179,7 +179,8 @@
 
   .project-grid{display:grid; grid-template-columns:1fr; gap:18px;}
   @media(min-width:640px){.project-grid{grid-template-columns:repeat(2,1fr);}}
-  .project-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 22px; text-align:left; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s; display:flex; flex-direction:column; gap:12px;}
+  @media(min-width:1024px){.project-grid{grid-template-columns:repeat(3,1fr);}}
+  .project-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 22px; text-align:left; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s; display:flex; flex-direction:column; gap:12px; cursor:pointer;}
   .project-card:hover{box-shadow:var(--shadow-md); transform:translateY(-3px);}
   .project-icon{width:38px; height:38px; border-radius:9px; background:var(--dark-bg); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:13px;}
   .project-card h3{font-size:17px; font-weight:600;}
@@ -187,16 +188,12 @@
   .view-more{margin-top:auto; font-size:13px; font-weight:600; color:var(--primary); display:inline-flex; align-items:center; gap:5px;}
   .view-more svg{width:12px; height:12px;}
 
-  /* MODALS */
-  .modal-overlay{position:fixed; inset:0; z-index:200; background:rgba(15,17,40,0.6); backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; padding:18px; opacity:0; visibility:hidden; transition:opacity .35s;}
-  .modal-overlay.open{opacity:1; visibility:visible;}
-  .modal-box{background:#fff; border-radius:var(--radius-lg); max-width:560px; width:100%; max-height:84vh; overflow-y:auto; padding:32px; transform:translateY(24px) scale(.97); transition:transform .4s; box-shadow:0 24px 60px rgba(0,0,0,0.2);}
-  .modal-overlay.open .modal-box{transform:translateY(0) scale(1);}
-  .modal-close{float:right; width:34px; height:34px; border-radius:50%; border:1px solid var(--border); background:var(--bg-alt); display:flex; align-items:center; justify-content:center; color:var(--ink-muted);}
-  .modal-close:hover{color:var(--ink);}
-  .modal-box h3{font-size:21px; margin:10px 0 14px; padding-right:36px;}
-  .modal-box ul{padding-left:19px; color:var(--ink-secondary); font-size:15px; margin-bottom:14px;}
-  .modal-box li{margin-bottom:7px;}
+  /* HIGHLIGHTS */
+  .highlight-grid{display:grid; grid-template-columns:1fr; gap:16px;}
+  @media(min-width:640px){.highlight-grid{grid-template-columns:repeat(3,1fr);}}
+  .highlight-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 20px; text-align:center; box-shadow:var(--shadow-sm);}
+  .highlight-card .big{font-family:var(--font-display); font-size:38px; font-weight:700; color:var(--primary);}
+  .highlight-card .label{font-size:13px; color:var(--ink-secondary); margin-top:4px;}
 
   /* SKILLS */
   .skills-grid{display:grid; grid-template-columns:1fr; gap:16px;}
@@ -233,17 +230,38 @@
   .cert-card p{font-size:13.5px; color:var(--ink-secondary);}
   .cert-detail-btn{font-size:12.5px; font-weight:600; color:var(--primary); margin-top:2px;}
 
+  /* EDUCATION */
+  .edu-grid{display:grid; grid-template-columns:1fr; gap:16px; max-width:600px; margin:0 auto;}
+  .edu-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 22px; box-shadow:var(--shadow-sm);}
+  .edu-card h3{font-size:19px; font-weight:600;}
+  .edu-card .edu-meta{font-size:13px; color:var(--ink-muted); margin-top:6px;}
+  .edu-card p{color:var(--ink-secondary); font-size:14.5px; margin-top:10px;}
+
   /* CONTACT */
   .contact-simple{text-align:center; max-width:640px; margin:0 auto;}
   .contact-simple .side-block{margin-bottom:22px;}
   .contact-simple h4{font-size:12.5px; letter-spacing:.06em; color:var(--dark-bg); margin-bottom:6px; font-weight:600;}
   .contact-simple a, .contact-simple p{font-size:16px; color:var(--ink); font-weight:500;}
   .contact-simple a:hover{color:var(--primary);}
+  section.dark .contact-simple h4{color:var(--gold);}
+  section.dark .contact-simple a, section.dark .contact-simple p{color:#fff;}
+  section.dark .contact-simple a:hover{color:var(--gold);}
 
   footer{background:var(--dark-bg); color:rgba(255,255,255,0.55); padding:28px 0;}
   .footer-bottom{display:flex; flex-wrap:wrap; justify-content:space-between; gap:10px; font-size:13px;}
   .footer-bottom a{color:rgba(255,255,255,0.75);}
   .footer-bottom a:hover{color:#fff;}
+
+  /* MODALS */
+  .modal-overlay{position:fixed; inset:0; z-index:200; background:rgba(15,17,40,0.6); backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; padding:18px; opacity:0; visibility:hidden; transition:opacity .35s;}
+  .modal-overlay.open{opacity:1; visibility:visible;}
+  .modal-box{background:#fff; border-radius:var(--radius-lg); max-width:560px; width:100%; max-height:84vh; overflow-y:auto; padding:32px; transform:translateY(24px) scale(.97); transition:transform .4s; box-shadow:0 24px 60px rgba(0,0,0,0.2);}
+  .modal-overlay.open .modal-box{transform:translateY(0) scale(1);}
+  .modal-close{float:right; width:34px; height:34px; border-radius:50%; border:1px solid var(--border); background:var(--bg-alt); display:flex; align-items:center; justify-content:center; color:var(--ink-muted);}
+  .modal-close:hover{color:var(--ink);}
+  .modal-box h3{font-size:21px; margin:10px 0 14px; padding-right:36px;}
+  .modal-box ul{padding-left:19px; color:var(--ink-secondary); font-size:15px; margin-bottom:14px;}
+  .modal-box li{margin-bottom:7px;}
 </style>
 </head>
 <body>
@@ -255,13 +273,13 @@
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
-      <a href="#expertise">Skills</a>
-      <a href="#research">Publication</a>
+      <a href="#expertise">Expertise</a>
+      <a href="#research">Research</a>
       <a href="#contact">Contact</a>
     </nav>
     <div style="display:flex; align-items:center; gap:10px;">
       <a class="btn btn-primary nav-cta" href="assets/Manav_Shah_Resume.pdf" download>Resume</a>
-      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mobileMenu" aria-label="Toggle menu" type="button"><span></span><span></span><span></span></button>
     </div>
   </div>
 </header>
@@ -270,8 +288,8 @@
   <a href="#about">About</a>
   <a href="#experience">Experience</a>
   <a href="#projects">Projects</a>
-  <a href="#expertise">Skills</a>
-  <a href="#research">Publication</a>
+  <a href="#expertise">Expertise</a>
+  <a href="#research">Research</a>
   <a href="#contact">Contact</a>
   <a class="btn btn-primary" href="assets/Manav_Shah_Resume.pdf" download>Download Resume</a>
 </div>
@@ -282,16 +300,15 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-text-col">
-        <div class="hero-badge">Open to Opportunities</div>
+        <div class="hero-badge">Available for Software Engineering &amp; Salesforce Opportunities</div>
         <h1>Manav Shah</h1>
-        <div class="role">Software Engineer — Salesforce &amp; AI Automation</div>
+        <div class="role">Software Engineer · Salesforce, Python &amp; AI Automation</div>
         <p class="lead">
-          I build Salesforce solutions and AI-driven automation — from enterprise
-          workflows and Apex to OCR-powered document intelligence.
+          I build practical software solutions across Salesforce, Python automation, data analytics and AI‑powered document processing — turning business workflows and raw data into reliable, usable systems.
         </p>
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">View Projects</a>
-          <a class="btn btn-outline" href="assets/Manav_Shah_Resume.pdf" download>Resume</a>
+          <a class="btn btn-primary" href="#projects">View My Work</a>
+          <a class="btn btn-outline" href="assets/Manav_Shah_Resume.pdf" download>Download Resume</a>
         </div>
         <div class="hero-social-row">
           <a class="social-circle" href="https://www.linkedin.com/in/manav-shah-bb8b7a271" target="_blank" rel="noopener" aria-label="LinkedIn">
@@ -320,31 +337,35 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">About</span>
-        <h2>Salesforce development, applied AI</h2>
+        <h2>Building software that solves real workflow problems</h2>
       </div>
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm an Information Technology graduate with hands-on experience across Salesforce
-            administration, AI-driven automation, and full-stack development. At Zeta-V
-            Technology Solutions, I work on Salesforce configuration, Apex development, data
-            management, and reporting, alongside building React and Node.js interfaces.
+            I'm a software engineer with hands-on experience across Salesforce, Python automation,
+            web development, AI, OCR, and data analytics. During my internship at Zeta-V Technology
+            Solutions, I built a Recruitment Management application on Salesforce Sales Cloud and
+            developed a Python-based LinkedIn analytics reporting pipeline that transformed raw
+            exports into standardized, presentation-ready executive reports.
           </p>
           <p>
-            As an AI Research Intern at Code4Bots, I researched automation opportunities for
-            companies like Zomato and Zerodha and helped design enterprise-specific AI
-            copilots. My final-year project, Parchify, combines OCR and human-in-the-loop
-            validation to process invoices — published in the International Journal of
-            Computer Applications.
+            My project work spans enterprise workflow automation and AI-powered document processing.
+            Parchify, my final-year capstone, uses OCR and Google Document AI to extract information
+            from printed and handwritten invoices, validate uncertain fields, and export structured
+            results through a React and Python/FastAPI application. The work also led to a research
+            publication in the International Journal of Computer Applications.
+          </p>
+          <p>
+            I enjoy learning unfamiliar technologies, taking ownership of problems, and building systems
+            that are useful beyond a prototype.
           </p>
           <a class="btn btn-outline" href="assets/Manav_Shah_Resume.pdf" download>Download Resume</a>
         </div>
         <div class="fact-card reveal" style="--d:.1s">
           <div class="fact-row"><span class="fact-label">Location</span><span class="fact-value">Pune, India</span></div>
-          <div class="fact-row"><span class="fact-label">Current Role</span><span class="fact-value">Software Engineering Intern, Zeta-V</span></div>
-          <div class="fact-row"><span class="fact-label">Education</span><span class="fact-value">B.E. Information Technology<br>NBN Sinhgad School of Engineering</span></div>
+          <div class="fact-row"><span class="fact-label">Education</span><span class="fact-value">B.E. Information Technology<br>Savitribai Phule Pune University</span></div>
           <div class="fact-row"><span class="fact-label">Graduation</span><span class="fact-value">2026 · CGPA 7.68/10</span></div>
-          <div class="fact-row"><span class="fact-label">Focus</span><span class="fact-value">Salesforce · AI Automation</span></div>
+          <div class="fact-row"><span class="fact-label">Focus</span><span class="fact-value">Software Engineering · Salesforce<br>Python Automation · AI</span></div>
         </div>
       </div>
     </div>
@@ -355,18 +376,21 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Experience</span>
-        <h2>Where I've worked</h2>
+        <h2>Professional Experience</h2>
+        <p>Hands-on experience across enterprise applications, automation, and AI research.</p>
       </div>
       <div class="trace">
         <div class="trace-item reveal">
           <div class="trace-node"></div>
           <div class="role-title">Software Engineering Intern</div>
-          <div class="role-meta">Zeta-V Technology Solutions Limited · Jan 2026 — Jun 2026</div>
+          <div class="role-meta">Zeta-V Technology Solutions Ltd. · Jan 2026 — Jun 2026</div>
           <ul>
-            <li>Completed 4-month Salesforce Administrator training; built Lightning components with Apex.</li>
-            <li>Used Python to clean and validate 500+ Salesforce records, improving data accuracy.</li>
-            <li>Built responsive UI components with React.js and Bootstrap; supported Node.js backend.</li>
-            <li>Collaborated in an agile team on planning, code reviews, and troubleshooting.</li>
+            <li>Completed 4-month Salesforce Administration training and built a Recruitment Management application on Salesforce Sales Cloud using custom objects, reports, dashboards, validation rules, and access controls.</li>
+            <li>Built an automated LinkedIn analytics reporting pipeline in Python using pandas, NumPy, Matplotlib, openpyxl and xlrd to clean raw exports, detect file and sheet structures, and generate standardized executive reports.</li>
+            <li>Automated the generation of trend analysis, monthly comparisons, demographic breakdowns and KPI summaries as matched 600-DPI PNG/SVG outputs for presentation use.</li>
+            <li>Worked on the frontend of a website revamp project using modern web technologies and contributed to backend routing.</li>
+            <li>Took ownership of assigned project components, including task planning, timelines, implementation and troubleshooting.</li>
+            <li>Completed 34,000 Salesforce Trailhead points, including 4 Superbadges and 34 badges during the internship.</li>
           </ul>
         </div>
         <div class="trace-item reveal" style="--d:.1s">
@@ -374,9 +398,10 @@
           <div class="role-title">AI Research Intern</div>
           <div class="role-meta">Code4Bots Pvt. Ltd. · Feb 2025 — Apr 2025</div>
           <ul>
-            <li>Researched workflows at Zomato and Zerodha to identify AI-driven automation opportunities.</li>
-            <li>Co-designed enterprise-specific AI copilots tailored to client business processes.</li>
-            <li>Authored research documentation on AI implementation strategy and feasibility analysis.</li>
+            <li>Researched companies including Zomato and Zerodha to understand existing workflows and identify realistic opportunities for AI-driven automation.</li>
+            <li>Prepared a 100-slide research and recommendation presentation covering business processes, automation opportunities and proposed AI applications.</li>
+            <li>Contributed to the initial architecture of an AI model tailored to a specific business use case.</li>
+            <li>Developed experience in AI research, communicating technical findings, feasibility analysis and early-stage AI architecture design.</li>
           </ul>
         </div>
       </div>
@@ -388,59 +413,105 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Projects</span>
-        <h2>Selected work</h2>
+        <h2>Selected Projects</h2>
+        <p>Systems, automation pipelines and AI applications I've built.</p>
       </div>
       <div class="featured-project reveal">
         <span class="project-tag">Featured Project · Published Research</span>
-        <h3>Parchify — AI-Powered Invoice Processing Platform</h3>
-        <p>AI-powered invoice digitization platform combining OCR, document processing, validation, and automation.</p>
+        <h3>Parchify — Intelligent Invoice Processing Platform</h3>
+        <p>AI-powered invoice digitization platform designed to extract structured information from printed and handwritten invoices without relying on fixed templates.</p>
         <ul>
-          <li>Led a 4-member team — OCR-based invoice extraction with image preprocessing</li>
-          <li>Human-in-the-loop validation workflow with SQL storage and Excel/PDF export</li>
+          <li>Integrated Google Document AI and OCR for invoice data extraction.</li>
+          <li>Added image preprocessing including deskewing, cropping and noise reduction to improve processing of lower-quality scans.</li>
+          <li>Designed a confidence-based validation layer that flags low-confidence fields for human review instead of accepting uncertain data automatically.</li>
+          <li>Built the frontend using React.js and Tailwind CSS.</li>
+          <li>Developed a Python/FastAPI backend with SQLite-based data storage.</li>
+          <li>Added export support for Excel, PDF and JSON.</li>
+          <li>Co-authored research based on the framework, published in the International Journal of Computer Applications.</li>
         </ul>
-        <div class="modal-tech"><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">Google Cloud Vision</span><span class="chip">SQL</span></div>
-        <button class="featured-cta" data-modal="modal-parchify">View Case Study <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        <div class="modal-tech"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">React.js</span><span class="chip">Tailwind CSS</span><span class="chip">Google Document AI</span><span class="chip">OCR</span><span class="chip">OpenCV</span><span class="chip">SQLite</span></div>
+        <button class="featured-cta" data-modal="modal-parchify" type="button">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
       <div class="project-grid">
-        <button class="project-card reveal" data-modal="modal-sf">
+        <button class="project-card reveal" data-modal="modal-sf" type="button">
           <span class="project-tag">Salesforce</span>
           <div class="project-icon">SF</div>
-          <h3>Salesforce CRM Management</h3>
-          <p>Apex, Lightning Components, Flows, and Process Builder automation.</p>
+          <h3>Recruitment Management System</h3>
+          <p>Salesforce Sales Cloud application for managing recruitment workflows with custom objects, reports, dashboards, and access controls.</p>
           <span class="view-more">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
-        <button class="project-card reveal" style="--d:.05s" data-modal="modal-genai">
+        <button class="project-card reveal" style="--d:.05s" data-modal="modal-linkedin" type="button">
+          <span class="project-tag">Python Automation</span>
+          <div class="project-icon">PY</div>
+          <h3>LinkedIn Analytics Automation Pipeline</h3>
+          <p>Python pipeline that transforms raw LinkedIn analytics exports into standardized, presentation-ready executive reports.</p>
+          <span class="view-more">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+        </button>
+        <button class="project-card reveal" style="--d:.1s" data-modal="modal-genai" type="button">
           <span class="project-tag">Generative AI</span>
           <div class="project-icon">AI</div>
-          <h3>GenAI Content &amp; Post Generator</h3>
-          <p>Groq + Llama 3.1 writing assistant with style analysis.</p>
+          <h3>AI Content &amp; Post Generator</h3>
+          <p>Generative AI writing application for creating and refining professional social media content with tone and style customization.</p>
           <span class="view-more">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
       </div>
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section id="expertise">
+  <!-- HIGHLIGHTS -->
+  <section id="highlights">
     <div class="wrap">
       <div class="section-head reveal">
-        <span class="eyebrow">Skills</span>
-        <h2>What I work with</h2>
+        <span class="eyebrow">Highlights</span>
+        <h2>Salesforce Achievements</h2>
+      </div>
+      <div class="highlight-grid">
+        <div class="highlight-card reveal">
+          <div class="big">34,000+</div>
+          <div class="label">Salesforce Trailhead Points</div>
+        </div>
+        <div class="highlight-card reveal" style="--d:.05s">
+          <div class="big">4</div>
+          <div class="label">Salesforce Superbadges</div>
+        </div>
+        <div class="highlight-card reveal" style="--d:.1s">
+          <div class="big">34</div>
+          <div class="label">Trailhead Badges</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS / TECHNICAL EXPERTISE -->
+  <section id="expertise" class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Expertise</span>
+        <h2>Technical Expertise</h2>
+        <p>Tools and technologies I use to build, automate and analyze.</p>
       </div>
       <div class="skills-grid">
         <div class="skill-group reveal">
-          <h4>Languages &amp; Web</h4>
-          <div class="chip-row"><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">HTML5 &amp; CSS3</span></div>
+          <h4>Programming Languages</h4>
+          <div class="chip-row"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div>
         </div>
         <div class="skill-group reveal" style="--d:.05s">
           <h4>Salesforce</h4>
-          <div class="chip-row"><span class="chip">Administration</span><span class="chip">Apex</span><span class="chip">Lightning Components</span><span class="chip">Flows</span></div>
+          <div class="chip-row"><span class="chip">Salesforce Administration</span><span class="chip">Sales Cloud</span><span class="chip">Apex</span><span class="chip">Lightning Components</span><span class="chip">Flows</span><span class="chip">Process Builder</span><span class="chip">Reports &amp; Dashboards</span><span class="chip">Validation Rules</span><span class="chip">Access Management</span></div>
         </div>
         <div class="skill-group reveal" style="--d:.1s">
-          <h4>AI &amp; Automation</h4>
-          <div class="chip-row"><span class="chip">OCR</span><span class="chip">OpenCV</span><span class="chip">Document AI</span><span class="chip">Data Analytics</span></div>
+          <h4>Web Development</h4>
+          <div class="chip-row"><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">HTML5 &amp; CSS3</span><span class="chip">Bootstrap</span><span class="chip">Tailwind CSS</span><span class="chip">FastAPI</span></div>
         </div>
         <div class="skill-group reveal" style="--d:.15s">
+          <h4>AI &amp; Automation</h4>
+          <div class="chip-row"><span class="chip">Machine Learning</span><span class="chip">Generative AI</span><span class="chip">OCR</span><span class="chip">Google Document AI</span><span class="chip">OpenCV</span><span class="chip">AI Automation</span><span class="chip">UiPath</span></div>
+        </div>
+        <div class="skill-group reveal" style="--d:.2s">
+          <h4>Data &amp; Analytics</h4>
+          <div class="chip-row"><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">openpyxl</span><span class="chip">xlrd</span><span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Data Validation</span><span class="chip">Business Reporting</span></div>
+        </div>
+        <div class="skill-group reveal" style="--d:.25s">
           <h4>Cloud &amp; Tools</h4>
           <div class="chip-row"><span class="chip">Microsoft Azure</span><span class="chip">Oracle Cloud Infrastructure</span><span class="chip">Git</span></div>
         </div>
@@ -448,12 +519,13 @@
     </div>
   </section>
 
-  <!-- RESEARCH (dark anchor section) -->
+  <!-- RESEARCH -->
   <section id="research" class="dark">
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Research &amp; Publication</span>
-        <h2>Published work</h2>
+        <h2>Research &amp; Publication</h2>
+        <p>Applying AI and document intelligence to real-world data workflows.</p>
       </div>
       <div class="pub-strip reveal">
         <div class="pub-image-col">
@@ -463,7 +535,7 @@
         <div class="pub-text-col">
           <span class="pub-badge">IJCA · 2025</span>
           <h3>Vendor-Agnostic Invoice Processing Framework Integrating OCR, Canonical Modeling, and Human-in-the-Loop Validation</h3>
-          <p>Published in the International Journal of Computer Applications. Proposes a vendor-independent approach for extracting and standardizing invoice data with human-in-the-loop validation.</p>
+          <p>Research based on the Parchify invoice-processing framework, exploring a vendor-independent approach for extracting, standardizing and validating invoice information using OCR, canonical data modeling and human-in-the-loop validation.</p>
           <a class="pub-link" href="https://www.ijcaonline.org/archives/volume187/number90/vendor-agnostic-invoice-processing-framework-integrating-ocr-canonical-modeling-and-human-in-the-loop-validation/" target="_blank" rel="noopener">
             Read Publication <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
@@ -477,22 +549,22 @@
     <div class="wrap">
       <div class="section-head reveal">
         <span class="eyebrow">Certifications</span>
-        <h2>Credentials</h2>
+        <h2>Certifications &amp; Credentials</h2>
       </div>
       <div class="cert-grid">
-        <div class="cert-card reveal" data-cert="azure">
+        <div class="cert-card reveal" data-cert="azure" type="button">
           <div class="cert-badge azure">AZ</div>
           <h4>Microsoft Azure Fundamentals</h4>
           <p>AZ-900 · Score 985/1000</p>
           <span class="cert-detail-btn">View Details</span>
         </div>
-        <div class="cert-card reveal" style="--d:.05s" data-cert="oracle">
+        <div class="cert-card reveal" style="--d:.05s" data-cert="oracle" type="button">
           <div class="cert-badge oracle">OCI</div>
           <h4>Oracle Cloud Infrastructure</h4>
           <p>AI Foundations Associate · 2025</p>
           <span class="cert-detail-btn">View Details</span>
         </div>
-        <div class="cert-card reveal" style="--d:.1s" data-cert="ibm">
+        <div class="cert-card reveal" style="--d:.1s" data-cert="ibm" type="button">
           <div class="cert-badge ibm">IBM</div>
           <h4>IBM SkillsBuild</h4>
           <p>AI Fundamentals · Certified</p>
@@ -502,10 +574,27 @@
     </div>
   </section>
 
+  <!-- EDUCATION -->
+  <section id="education" class="alt">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Education</span>
+        <h2>Academic Background</h2>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card reveal">
+          <h3>B.E. Information Technology</h3>
+          <div class="edu-meta">NBN Sinhgad School of Engineering, Pune · 2022 – 2026</div>
+          <p>Savitribai Phule Pune University · CGPA: 7.68 / 10 · First Class</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section id="contact" class="dark">
     <div class="wrap contact-simple reveal">
-      <div class="section-head"><span class="eyebrow">Contact</span><h2>Get in touch</h2></div>
+      <div class="section-head"><span class="eyebrow">Contact</span><h2>Let's Build Something Useful</h2><p>I'm interested in software engineering, Salesforce, automation, and AI‑driven applications. Feel free to reach out.</p></div>
       <div class="side-block"><h4>Email</h4><a href="mailto:manav.it11@gmail.com">manav.it11@gmail.com</a></div>
       <div class="side-block"><h4>Phone</h4><a href="tel:+918623085183">+91 8623085183</a></div>
       <div class="side-block"><h4>Location</h4><p>Pune, Maharashtra, India</p></div>
@@ -524,26 +613,86 @@
 
 <footer>
   <div class="wrap footer-bottom">
-    <div><strong style="color:#fff;">Manav Shah</strong> · Software Engineer</div>
-    <div>© 2026 · <a href="mailto:manav.it11@gmail.com">Email</a> · <a href="https://linkedin.com/in/manav-shah-bb8b7a271">LinkedIn</a></div>
+    <div><strong style="color:#fff;">Manav Shah</strong> · Software Engineer | Salesforce · Python · AI Automation</div>
+    <div>© 2026 · <a href="mailto:manav.it11@gmail.com">Email</a> · <a href="https://linkedin.com/in/manav-shah-bb8b7a271">LinkedIn</a> · <a href="https://github.com/Mannav1104">GitHub</a></div>
   </div>
 </footer>
 
 <!-- Project modals -->
-<div class="modal-overlay" id="modal-parchify"><div class="modal-box"><button class="modal-close" data-close>✕</button><span class="project-tag">Final Year · Published</span><h3>Parchify — AI Invoice Processing</h3><ul><li>Led 4-member team, integrated OCR with OpenCV &amp; Google Cloud Vision.</li><li>Human-in-the-loop validation, SQL storage, Excel/PDF export.</li></ul><div class="modal-tech"><span class="chip">Python</span><span class="chip">OpenCV</span><span class="chip">Google Cloud Vision</span><span class="chip">SQL</span></div></div></div>
-<div class="modal-overlay" id="modal-sf"><div class="modal-box"><button class="modal-close" data-close>✕</button><span class="project-tag">Salesforce</span><h3>Salesforce CRM Management</h3><ul><li>Configured users, roles, profiles, permission sets.</li><li>Developed Apex classes, triggers, Lightning Components.</li><li>Created reports/dashboards and Flow automation.</li></ul><div class="modal-tech"><span class="chip">Apex</span><span class="chip">Lightning</span><span class="chip">Flows</span></div></div></div>
-<div class="modal-overlay" id="modal-genai"><div class="modal-box"><button class="modal-close" data-close>✕</button><span class="project-tag">Generative AI</span><h3>GenAI Content Generator</h3><ul><li>Groq API + Llama 3.1 writing assistant.</li><li>Style analysis, tone customization, topic recommendations, PDF export.</li></ul><div class="modal-tech"><span class="chip">JavaScript</span><span class="chip">Groq</span><span class="chip">Llama 3.1</span></div></div></div>
+<div class="modal-overlay" id="modal-parchify">
+  <div class="modal-box">
+    <button class="modal-close" data-close type="button">✕</button>
+    <span class="project-tag">Final Year · Published</span>
+    <h3>Parchify — Intelligent Invoice Processing Platform</h3>
+    <ul>
+      <li>Integrated Google Document AI and OCR for invoice data extraction.</li>
+      <li>Added image preprocessing including deskewing, cropping and noise reduction.</li>
+      <li>Designed a confidence-based validation layer with human-in-the-loop review.</li>
+      <li>Built React.js frontend with Tailwind CSS and Python/FastAPI backend.</li>
+      <li>SQLite storage with Excel, PDF and JSON export.</li>
+      <li>Co-authored research published in IJCA.</li>
+    </ul>
+    <div class="modal-tech"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">React.js</span><span class="chip">Tailwind CSS</span><span class="chip">Google Document AI</span><span class="chip">OCR</span><span class="chip">OpenCV</span><span class="chip">SQLite</span></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-sf">
+  <div class="modal-box">
+    <button class="modal-close" data-close type="button">✕</button>
+    <span class="project-tag">Salesforce</span>
+    <h3>Recruitment Management System</h3>
+    <ul>
+      <li>Built on Salesforce Sales Cloud during Salesforce Administration training.</li>
+      <li>Custom objects, page layouts, reports and dashboards.</li>
+      <li>Validation rules and role-based access controls.</li>
+      <li>Workflow and process automation.</li>
+      <li>Data management and reporting.</li>
+    </ul>
+    <div class="modal-tech"><span class="chip">Salesforce Sales Cloud</span><span class="chip">Salesforce Administration</span><span class="chip">Apex</span><span class="chip">Lightning Components</span><span class="chip">Flows</span><span class="chip">Reports &amp; Dashboards</span></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-linkedin">
+  <div class="modal-box">
+    <button class="modal-close" data-close type="button">✕</button>
+    <span class="project-tag">Python Automation</span>
+    <h3>LinkedIn Analytics Automation Pipeline</h3>
+    <ul>
+      <li>Detects file formats and spreadsheet structures automatically.</li>
+      <li>Locates relevant header rows from raw analytics exports.</li>
+      <li>Cleans and processes analytics data.</li>
+      <li>Generates trend lines, monthly comparisons, demographic analysis and KPI summaries.</li>
+      <li>Standardizes chart formatting across outputs.</li>
+      <li>Exports matched 600-DPI PNG and SVG charts ready for PowerPoint.</li>
+      <li>Includes validation checks before treating a reporting run as complete.</li>
+    </ul>
+    <div class="modal-tech"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">openpyxl</span><span class="chip">xlrd</span><span class="chip">Data Analytics</span><span class="chip">Automation</span></div>
+  </div>
+</div>
+<div class="modal-overlay" id="modal-genai">
+  <div class="modal-box">
+    <button class="modal-close" data-close type="button">✕</button>
+    <span class="project-tag">Generative AI</span>
+    <h3>AI Content &amp; Post Generator</h3>
+    <ul>
+      <li>AI-assisted content generation for professional social media.</li>
+      <li>Tone and style customization.</li>
+      <li>Writing style analysis.</li>
+      <li>Topic and content suggestions.</li>
+      <li>Export-ready output.</li>
+    </ul>
+    <div class="modal-tech"><span class="chip">JavaScript</span><span class="chip">Groq API</span><span class="chip">Llama 3.1</span><span class="chip">Generative AI</span></div>
+  </div>
+</div>
 
 <!-- Zoom modal for publication image -->
 <div class="zoom-modal" id="zoomModal" style="position:fixed; inset:0; z-index:300; background:rgba(0,0,0,0.9); display:flex; align-items:center; justify-content:center; padding:24px; opacity:0; visibility:hidden; transition:opacity .3s;">
-  <button class="zoom-close" id="zoomClose" style="position:absolute; top:20px; right:20px; width:40px; height:40px; border-radius:50%; border:1px solid rgba(255,255,255,0.3); background:rgba(255,255,255,0.1); color:#fff; font-size:16px;">✕</button>
+  <button class="zoom-close" id="zoomClose" style="position:absolute; top:20px; right:20px; width:40px; height:40px; border-radius:50%; border:1px solid rgba(255,255,255,0.3); background:rgba(255,255,255,0.1); color:#fff; font-size:16px;" type="button">✕</button>
   <img src="" alt="Publication zoom" id="zoomImage" style="max-width:100%; max-height:90vh; border-radius:8px;">
 </div>
 
 <!-- Certification detail modal -->
 <div class="modal-overlay" id="certModal">
   <div class="modal-box">
-    <button class="modal-close" data-close>✕</button>
+    <button class="modal-close" data-close type="button">✕</button>
     <h3 id="certModalTitle"></h3>
     <p id="certModalDesc" style="color:var(--ink-secondary); line-height:1.7; margin-top:12px;"></p>
   </div>
@@ -556,61 +705,123 @@
 </div>
 
 <script>
-  const io = new IntersectionObserver((entries) => { entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } }); }, { threshold:0.1 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  (function() {
+    // Define all element references at the top to avoid temporal dead zone issues
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const pubImage = document.getElementById('pubImage');
+    const zoomModal = document.getElementById('zoomModal');
+    const zoomImage = document.getElementById('zoomImage');
+    const zoomClose = document.getElementById('zoomClose');
+    const certModal = document.getElementById('certModal');
+    const certModalTitle = document.getElementById('certModalTitle');
+    const certModalDesc = document.getElementById('certModalDesc');
 
-  const menuBtn = document.getElementById('menuBtn');
-  const mobileMenu = document.getElementById('mobileMenu');
-  function closeMenu(){ menuBtn.setAttribute('aria-expanded','false'); mobileMenu.classList.remove('open'); document.body.style.overflow = ''; }
-  menuBtn.addEventListener('click', () => {
-    const open = menuBtn.getAttribute('aria-expanded') === 'true';
-    menuBtn.setAttribute('aria-expanded', String(!open));
-    mobileMenu.classList.toggle('open', !open);
-    document.body.style.overflow = open ? '' : 'hidden';
-  });
-  mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    // Intersection Observer for reveal animations
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('in');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
-  document.querySelectorAll('[data-modal]').forEach(card => {
-    card.addEventListener('click', () => {
-      const modal = document.getElementById(card.getAttribute('data-modal'));
-      if(modal){ modal.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    // Mobile menu toggle
+    function closeMenu() {
+      menuBtn.setAttribute('aria-expanded', 'false');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+    menuBtn.addEventListener('click', () => {
+      const open = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', String(!open));
+      mobileMenu.classList.toggle('open', !open);
+      document.body.style.overflow = open ? '' : 'hidden';
     });
-  });
-  document.querySelectorAll('.modal-overlay').forEach(overlay => {
-    overlay.addEventListener('click', (e) => { if(e.target === overlay || e.target.closest('[data-close]')){ overlay.classList.remove('open'); document.body.style.overflow = ''; } });
-  });
-  document.addEventListener('keydown', (e) => { if(e.key === 'Escape'){ document.querySelectorAll('.modal-overlay.open').forEach(m => m.classList.remove('open')); document.body.style.overflow = ''; if(zoomModal.style.visibility==='visible'){ zoomModal.style.opacity=0; zoomModal.style.visibility='hidden'; document.body.style.overflow=''; } } });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
 
-  const pubImage = document.getElementById('pubImage');
-  const zoomModal = document.getElementById('zoomModal');
-  const zoomImage = document.getElementById('zoomImage');
-  const zoomClose = document.getElementById('zoomClose');
-  if(pubImage){
-    pubImage.addEventListener('click', () => {
-      zoomImage.src = pubImage.src;
-      zoomModal.style.opacity = 1; zoomModal.style.visibility = 'visible';
-      document.body.style.overflow = 'hidden';
+    // Open modals via [data-modal] attribute
+    document.querySelectorAll('[data-modal]').forEach(el => {
+      el.addEventListener('click', () => {
+        const modalId = el.getAttribute('data-modal');
+        const modal = document.getElementById(modalId);
+        if (modal) {
+          modal.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        } else {
+          console.warn('Modal not found:', modalId);
+        }
+      });
     });
-  }
-  function closeZoom(){ zoomModal.style.opacity = 0; zoomModal.style.visibility = 'hidden'; document.body.style.overflow = ''; }
-  zoomClose.addEventListener('click', closeZoom);
-  zoomModal.addEventListener('click', (e) => { if(e.target === zoomModal) closeZoom(); });
 
-  const certModal = document.getElementById('certModal');
-  const certModalTitle = document.getElementById('certModalTitle');
-  const certModalDesc = document.getElementById('certModalDesc');
-  document.querySelectorAll('.cert-card').forEach(card => {
-    card.addEventListener('click', () => {
-      const certType = card.getAttribute('data-cert');
-      const detailDiv = document.getElementById(`cert-detail-${certType}`);
-      if(detailDiv){
-        certModalTitle.textContent = card.querySelector('h4').textContent;
-        certModalDesc.textContent = detailDiv.textContent;
-        certModal.classList.add('open');
-        document.body.style.overflow = 'hidden';
+    // Close modals when clicking overlay or close button
+    document.querySelectorAll('.modal-overlay').forEach(overlay => {
+      overlay.addEventListener('click', (e) => {
+        if (e.target === overlay || e.target.closest('[data-close]')) {
+          overlay.classList.remove('open');
+          document.body.style.overflow = '';
+        }
+      });
+    });
+
+    // Escape key closes modals and zoom
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.modal-overlay.open').forEach(m => {
+          m.classList.remove('open');
+        });
+        document.body.style.overflow = '';
+        if (zoomModal && zoomModal.style.visibility === 'visible') {
+          closeZoom();
+        }
       }
     });
-  });
+
+    // Zoom modal for publication image
+    function closeZoom() {
+      if (zoomModal) {
+        zoomModal.style.opacity = '0';
+        zoomModal.style.visibility = 'hidden';
+        document.body.style.overflow = '';
+      }
+    }
+    if (pubImage) {
+      pubImage.addEventListener('click', () => {
+        if (zoomImage) {
+          zoomImage.src = pubImage.src;
+          zoomModal.style.opacity = '1';
+          zoomModal.style.visibility = 'visible';
+          document.body.style.overflow = 'hidden';
+        }
+      });
+    }
+    if (zoomClose) {
+      zoomClose.addEventListener('click', closeZoom);
+    }
+    if (zoomModal) {
+      zoomModal.addEventListener('click', (e) => {
+        if (e.target === zoomModal) closeZoom();
+      });
+    }
+
+    // Certification modal logic
+    document.querySelectorAll('.cert-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const certType = card.getAttribute('data-cert');
+        const detailDiv = document.getElementById(`cert-detail-${certType}`);
+        if (detailDiv && certModal && certModalTitle && certModalDesc) {
+          certModalTitle.textContent = card.querySelector('h4') ? card.querySelector('h4').textContent : '';
+          certModalDesc.textContent = detailDiv.textContent;
+          certModal.classList.add('open');
+          document.body.style.overflow = 'hidden';
+        } else {
+          console.warn('Certification detail missing for:', certType);
+        }
+      });
+    });
+  })();
 </script>
 </body>
 </html>
