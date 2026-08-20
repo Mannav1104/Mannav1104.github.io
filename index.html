@@ -26,6 +26,9 @@
     --primary: #2138B0;
     --primary-deep: #171F7A;
     --gold: #C8A24A;
+    --azure: #0078D4;
+    --udemy: #A435F0;
+    --ibm: #052FAD;
     --radius-sm: 10px;
     --radius: 16px;
     --radius-lg: 22px;
@@ -106,7 +109,8 @@
   @media(min-width:820px){.hero-inner{grid-template-columns:1.2fr .8fr; text-align:left;}}
   .hero-text-col{display:flex; flex-direction:column; align-items:center; text-align:center;}
   @media(min-width:820px){.hero-text-col{align-items:flex-start; text-align:left;}}
-  .hero-badge{display:inline-flex; align-items:center; gap:8px; font-size:12.5px; font-weight:600; color:var(--primary); background:rgba(33,56,176,0.08); border:1px solid rgba(33,56,176,0.18); padding:7px 14px; border-radius:999px; margin-bottom:22px;}
+  .hero-badge{display:inline-flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:11.5px; letter-spacing:.04em; font-weight:600; color:var(--primary); background:rgba(33,56,176,0.08); border:1px solid rgba(33,56,176,0.18); padding:7px 14px; border-radius:999px; margin-bottom:22px;}
+  .hero-badge .dot{width:7px; height:7px; border-radius:50%; background:#2FBF71; box-shadow:0 0 0 3px rgba(47,191,113,0.18);}
   .hero h1{font-size:clamp(42px,7.5vw,66px); font-weight:600; line-height:1.05; margin-bottom:10px;}
   .hero .role{font-family:var(--font-body); font-size:clamp(16px,2vw,19px); font-weight:600; color:var(--ink-secondary); margin-bottom:18px;}
   .hero p.lead{font-size:17px; color:var(--ink-secondary); max-width:50ch; margin-bottom:30px;}
@@ -144,15 +148,18 @@
   section.dark .btn-outline:hover{background:#e9ecf7 !important;}
 
   /* ABOUT */
-  .about-grid{display:grid; grid-template-columns:1fr; gap:32px;}
+  .about-grid{display:grid; grid-template-columns:1fr; gap:32px; align-items:start;}
   @media(min-width:860px){.about-grid{grid-template-columns:1.4fr 1fr;}}
   .about-text p{color:var(--ink-secondary); font-size:16px; margin-bottom:16px;}
-  .fact-card{background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--dark-bg); border-radius:var(--radius); padding:26px; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s;}
+  .fact-card{background:var(--surface); border:1px solid var(--border); border-top:3px solid var(--dark-bg); border-radius:var(--radius); padding:8px 26px; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s;}
   .fact-card:hover{box-shadow:var(--shadow-md); transform:translateY(-2px);}
-  .fact-row{display:flex; justify-content:space-between; gap:16px; padding:13px 0; border-bottom:1px solid var(--border); font-size:14.5px;}
+  .fact-row{display:flex; align-items:flex-start; gap:14px; padding:16px 0; border-bottom:1px solid var(--border); font-size:14.5px;}
   .fact-row:last-child{border-bottom:none;}
-  .fact-label{color:var(--ink-muted); font-size:12.5px;}
-  .fact-value{font-weight:600; text-align:right;}
+  .fact-icon{flex:0 0 auto; width:34px; height:34px; border-radius:9px; background:var(--bg-alt); color:var(--primary); display:flex; align-items:center; justify-content:center; margin-top:1px;}
+  .fact-icon svg{width:16px; height:16px;}
+  .fact-body{flex:1; display:flex; justify-content:space-between; align-items:baseline; gap:14px; flex-wrap:wrap;}
+  .fact-label{color:var(--ink-muted); font-size:11.5px; font-family:var(--font-mono); letter-spacing:.04em; text-transform:uppercase; flex:0 0 auto;}
+  .fact-value{font-weight:600; text-align:right; margin-left:auto;}
 
   /* EXPERIENCE */
   .trace{position:relative; padding-left:32px; max-width:740px; margin:0 auto;}
@@ -161,17 +168,18 @@
   .trace-item:last-child{padding-bottom:0;}
   .trace-node{position:absolute; left:-32px; top:5px; width:16px; height:16px; border-radius:50%; background:var(--surface); border:3px solid var(--primary);}
   .role-title{font-family:var(--font-display); font-weight:600; font-size:19px;}
-  .role-meta{font-size:13px; color:var(--ink-muted); margin:6px 0 14px;}
+  .role-meta{font-family:var(--font-mono); font-size:12.5px; color:var(--ink-muted); margin:6px 0 14px;}
   .trace-item ul{color:var(--ink-secondary); font-size:15px; padding-left:19px;}
   .trace-item li{margin-bottom:7px;}
 
   /* PROJECTS */
   .featured-project{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-lg); padding:32px 30px; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s; margin-bottom:20px; display:flex; flex-direction:column; gap:14px;}
   .featured-project:hover{box-shadow:var(--shadow-md); transform:translateY(-2px);}
-  .project-tag{font-size:11.5px; font-weight:600; background:var(--dark-bg); color:#fff; padding:5px 11px; border-radius:6px; align-self:flex-start;}
+  .project-tag{font-family:var(--font-mono); font-size:11px; letter-spacing:.03em; font-weight:600; background:var(--dark-bg); color:#fff; padding:6px 12px; border-radius:6px; align-self:flex-start;}
   .featured-project h3{font-size:clamp(19px,2.4vw,23px); font-weight:600;}
   .featured-project p{color:var(--ink-secondary); font-size:15px;}
   .featured-project ul{padding-left:19px; color:var(--ink-secondary); font-size:14.5px;}
+  .featured-project li{margin-bottom:6px;}
   .modal-tech{display:flex; flex-wrap:wrap; gap:8px; margin-top:4px;}
   .featured-cta{font-weight:600; color:var(--primary); font-size:14px; display:inline-flex; align-items:center; gap:6px; background:none; border:none; margin-top:6px;}
   .featured-cta svg{width:13px; height:13px; transition:transform .3s;}
@@ -182,26 +190,30 @@
   @media(min-width:1024px){.project-grid{grid-template-columns:repeat(3,1fr);}}
   .project-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 22px; text-align:left; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s; display:flex; flex-direction:column; gap:12px; cursor:pointer;}
   .project-card:hover{box-shadow:var(--shadow-md); transform:translateY(-3px);}
-  .project-icon{width:38px; height:38px; border-radius:9px; background:var(--dark-bg); display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:13px;}
+  .project-icon{width:42px; height:42px; border-radius:11px; background:var(--dark-bg); display:flex; align-items:center; justify-content:center; color:#fff;}
+  .project-icon svg{width:20px; height:20px;}
   .project-card h3{font-size:17px; font-weight:600;}
-  .project-card p{color:var(--ink-secondary); font-size:14px;}
+  .project-card p{color:var(--ink-secondary); font-size:14px; flex:1;}
   .view-more{margin-top:auto; font-size:13px; font-weight:600; color:var(--primary); display:inline-flex; align-items:center; gap:5px;}
   .view-more svg{width:12px; height:12px;}
 
   /* HIGHLIGHTS */
   .highlight-grid{display:grid; grid-template-columns:1fr; gap:16px;}
   @media(min-width:640px){.highlight-grid{grid-template-columns:repeat(3,1fr);}}
-  .highlight-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 20px; text-align:center; box-shadow:var(--shadow-sm);}
-  .highlight-card .big{font-family:var(--font-display); font-size:38px; font-weight:700; color:var(--primary);}
-  .highlight-card .label{font-size:13px; color:var(--ink-secondary); margin-top:4px;}
+  .highlight-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:26px 20px; text-align:center; box-shadow:var(--shadow-sm); display:flex; flex-direction:column; align-items:center; gap:8px;}
+  .highlight-icon{width:38px; height:38px; border-radius:10px; background:rgba(33,56,176,0.08); color:var(--primary); display:flex; align-items:center; justify-content:center; margin-bottom:2px;}
+  .highlight-icon svg{width:19px; height:19px;}
+  .highlight-card .big{font-family:var(--font-display); font-size:38px; font-weight:700; color:var(--primary); line-height:1;}
+  .highlight-card .label{font-size:13px; color:var(--ink-secondary); margin-top:2px;}
 
   /* SKILLS */
   .skills-grid{display:grid; grid-template-columns:1fr; gap:16px;}
   @media(min-width:700px){.skills-grid{grid-template-columns:repeat(2,1fr);}}
   .skill-group{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 22px; box-shadow:var(--shadow-sm);}
-  .skill-group h4{color:var(--primary); margin-bottom:14px;}
+  .skill-group h4{color:var(--primary); margin-bottom:14px; display:flex; align-items:center; gap:8px;}
+  .skill-group h4 svg{width:14px; height:14px;}
   .chip-row{display:flex; flex-wrap:wrap; gap:8px;}
-  .chip{font-size:13.5px; background:var(--bg-alt); color:var(--ink); padding:7px 13px; border-radius:999px; border:1px solid var(--border); transition:transform .25s, border-color .25s, color .25s;}
+  .chip{font-family:var(--font-mono); font-size:12.5px; background:var(--bg-alt); color:var(--ink); padding:7px 13px; border-radius:999px; border:1px solid var(--border); transition:transform .25s, border-color .25s, color .25s;}
   .chip:hover{transform:translateY(-2px); border-color:var(--primary); color:var(--primary);}
 
   /* PUBLICATION (dark) */
@@ -210,9 +222,13 @@
   .pub-image-col img{max-width:100%; border-radius:12px; box-shadow:0 20px 44px rgba(0,0,0,0.4); cursor:zoom-in;}
   .pub-image-placeholder{aspect-ratio:4/5; border-radius:12px; border:1px dashed rgba(255,255,255,0.22); display:flex; flex-direction:column; align-items:center; justify-content:center; gap:8px; color:rgba(255,255,255,0.45); font-size:12.5px; text-align:center;}
   .pub-text-col{display:flex; flex-direction:column; gap:14px;}
-  .pub-badge{font-size:11.5px; font-weight:600; background:rgba(200,162,74,0.15); color:var(--gold); padding:7px 13px; border-radius:7px; align-self:flex-start;}
+  .pub-badge{font-family:var(--font-mono); font-size:11px; font-weight:600; background:rgba(200,162,74,0.15); color:var(--gold); padding:7px 13px; border-radius:7px; align-self:flex-start;}
   .pub-text-col h3{font-size:clamp(19px,2.6vw,24px); line-height:1.3;}
   .pub-text-col p{color:rgba(255,255,255,0.68); font-size:15px;}
+  .pub-stats{display:flex; flex-wrap:wrap; gap:18px; margin:4px 0 2px;}
+  .pub-stat{display:flex; flex-direction:column; gap:2px;}
+  .pub-stat .num{font-family:var(--font-display); font-size:22px; font-weight:700; color:var(--gold);}
+  .pub-stat .lbl{font-size:11.5px; color:rgba(255,255,255,0.55); font-family:var(--font-mono);}
   .pub-link{font-weight:600; font-size:14px; color:var(--gold); display:inline-flex; align-items:center; gap:6px; border-bottom:1.5px solid rgba(200,162,74,0.45); padding-bottom:3px; align-self:flex-start; transition:gap .3s, border-color .3s;}
   .pub-link:hover{gap:9px; border-color:var(--gold);}
   .pub-link svg{width:12px; height:12px;}
@@ -222,19 +238,22 @@
   @media(min-width:700px){.cert-grid{grid-template-columns:repeat(3,1fr);}}
   .cert-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:22px 20px; box-shadow:var(--shadow-sm); transition:box-shadow .35s, transform .35s; display:flex; flex-direction:column; gap:8px; cursor:pointer;}
   .cert-card:hover{box-shadow:var(--shadow-md); transform:translateY(-3px);}
-  .cert-badge{width:38px; height:38px; border-radius:10px; display:flex; align-items:center; justify-content:center; font-weight:700; font-size:13px; color:#fff; margin-bottom:6px;}
-  .cert-badge.azure{background:#0078D4;}
-  .cert-badge.oracle{background:#C74634;}
-  .cert-badge.ibm{background:#052FAD;}
-  .cert-card h4{font-size:15px; font-weight:600;}
+  .cert-badge{width:42px; height:42px; border-radius:11px; display:flex; align-items:center; justify-content:center; color:#fff; margin-bottom:6px;}
+  .cert-badge svg{width:20px; height:20px;}
+  .cert-badge.azure{background:var(--azure);}
+  .cert-badge.udemy{background:var(--udemy);}
+  .cert-badge.ibm{background:var(--ibm);}
+  .cert-card h4{font-size:15px; font-weight:600; text-transform:none; font-family:var(--font-display); letter-spacing:normal;}
   .cert-card p{font-size:13.5px; color:var(--ink-secondary);}
-  .cert-detail-btn{font-size:12.5px; font-weight:600; color:var(--primary); margin-top:2px;}
+  .cert-detail-btn{font-family:var(--font-mono); font-size:12px; font-weight:600; color:var(--primary); margin-top:2px;}
 
   /* EDUCATION */
   .edu-grid{display:grid; grid-template-columns:1fr; gap:16px; max-width:600px; margin:0 auto;}
-  .edu-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 22px; box-shadow:var(--shadow-sm);}
+  .edu-card{background:var(--surface); border:1px solid var(--border); border-radius:var(--radius); padding:24px 22px; box-shadow:var(--shadow-sm); display:flex; gap:18px; align-items:flex-start;}
+  .edu-icon{flex:0 0 auto; width:44px; height:44px; border-radius:11px; background:var(--dark-bg); color:#fff; display:flex; align-items:center; justify-content:center;}
+  .edu-icon svg{width:21px; height:21px;}
   .edu-card h3{font-size:19px; font-weight:600;}
-  .edu-card .edu-meta{font-size:13px; color:var(--ink-muted); margin-top:6px;}
+  .edu-card .edu-meta{font-family:var(--font-mono); font-size:12.5px; color:var(--ink-muted); margin-top:6px;}
   .edu-card p{color:var(--ink-secondary); font-size:14.5px; margin-top:10px;}
 
   /* CONTACT */
@@ -300,13 +319,14 @@
   <section class="hero">
     <div class="wrap hero-inner">
       <div class="hero-text-col">
-        <div class="hero-badge">Open to Software &amp; Technology Opportunities</div>
+        <div class="hero-badge"><span class="dot"></span>Open to Software &amp; Technology Opportunities</div>
         <h1>Manav Shah</h1>
         <div class="role">Software Engineer · Salesforce, Python &amp; AI Automation</div>
         <p class="lead">
-          I’m a software engineer who enjoys turning ideas and real-world problems into working software. My experience spans software development, Python automation, web applications, Salesforce, data analytics, and AI-powered systems.
-
-From building business applications and automated reporting pipelines to developing intelligent document-processing systems, I focus on learning quickly, solving problems thoughtfully, and building things that are actually useful.
+          I'm a software engineer who enjoys turning ideas and real world problems into working software. My experience spans software development, Python automation, web applications, Salesforce, data analytics, and AI powered systems.
+        </p>
+        <p class="lead" style="margin-top:-18px;">
+          From building business applications and automated reporting pipelines to developing intelligent document processing systems, I focus on learning quickly, solving problems thoughtfully, and building things that are actually useful.
         </p>
         <div class="hero-actions">
           <a class="btn btn-primary" href="#projects">View My Work</a>
@@ -344,15 +364,15 @@ From building business applications and automated reporting pipelines to develop
       <div class="about-grid">
         <div class="about-text reveal">
           <p>
-            I'm a software engineer with hands-on experience across Salesforce, Python automation,
+            I'm a software engineer with hands on experience across Salesforce, Python automation,
             web development, AI, OCR, and data analytics. During my internship at Zeta-V Technology
             Solutions, I built a Recruitment Management application on Salesforce Sales Cloud and
-            developed a Python-based LinkedIn analytics reporting pipeline that transformed raw
-            exports into standardized, presentation-ready executive reports.
+            developed a Python based LinkedIn analytics reporting pipeline that transformed raw
+            exports into standardized, presentation ready executive reports.
           </p>
           <p>
-            My project work spans enterprise workflow automation and AI-powered document processing.
-            Parchify, my final-year capstone, uses OCR and Google Document AI to extract information
+            My project work spans enterprise workflow automation and AI powered document processing.
+            Parchify, my final year capstone, uses OCR and Google Document AI to extract information
             from printed and handwritten invoices, validate uncertain fields, and export structured
             results through a React and Python/FastAPI application. The work also led to a research
             publication in the International Journal of Computer Applications.
@@ -364,10 +384,30 @@ From building business applications and automated reporting pipelines to develop
           <a class="btn btn-outline" href="assets/Manav Shah CV.pdf" download>Download Resume</a>
         </div>
         <div class="fact-card reveal" style="--d:.1s">
-          <div class="fact-row"><span class="fact-label">Location</span><span class="fact-value">Pune, India</span></div>
-          <div class="fact-row"><span class="fact-label">Education</span><span class="fact-value">B.E. Information Technology<br>Savitribai Phule Pune University</span></div>
-          <div class="fact-row"><span class="fact-label">Graduation</span><span class="fact-value">2026 · CGPA 7.68/10</span></div>
-          <div class="fact-row"><span class="fact-label">Focus</span><span class="fact-value">Software Engineering · Salesforce<br>Python Automation · AI</span></div>
+          <div class="fact-row">
+            <span class="fact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <span class="fact-body"><span class="fact-label">Location</span><span class="fact-value">Pune, India</span></span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg></span>
+            <span class="fact-body"><span class="fact-label">Education</span><span class="fact-value">B.E. Information Technology<br>Savitribai Phule Pune University</span></span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+            <span class="fact-body"><span class="fact-label">Graduation</span><span class="fact-value">2026 · CGPA 7.68/10</span></span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg></span>
+            <span class="fact-body"><span class="fact-label">Focus</span><span class="fact-value">Software Engineering · Salesforce<br>Python Automation · AI</span></span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></span>
+            <span class="fact-body"><span class="fact-label">Certifications</span><span class="fact-value">Azure · Udemy · IBM</span></span>
+          </div>
+          <div class="fact-row">
+            <span class="fact-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <span class="fact-body"><span class="fact-label">Availability</span><span class="fact-value">Open to full-time roles</span></span>
+          </div>
         </div>
       </div>
     </div>
@@ -385,11 +425,11 @@ From building business applications and automated reporting pipelines to develop
         <div class="trace-item reveal">
           <div class="trace-node"></div>
           <div class="role-title">Software Engineering Intern</div>
-          <div class="role-meta">Zeta-V Technology Solutions Ltd. · Jan 2026 — Jun 2026</div>
+          <div class="role-meta">Zeta-V Technology Solutions Ltd. · Jan 2026 – Jun 2026</div>
           <ul>
             <li>Completed 4-month Salesforce Administration training and built a Recruitment Management application on Salesforce Sales Cloud using custom objects, reports, dashboards, validation rules, and access controls.</li>
             <li>Built an automated LinkedIn analytics reporting pipeline in Python using pandas, NumPy, Matplotlib, openpyxl and xlrd to clean raw exports, detect file and sheet structures, and generate standardized executive reports.</li>
-            <li>Automated the generation of trend analysis, monthly comparisons, demographic breakdowns and KPI summaries as matched 600-DPI PNG/SVG outputs for presentation use.</li>
+            <li>Automated the generation of trend analysis, monthly comparisons, demographic breakdowns and KPI summaries as matched 600 DPI PNG/SVG outputs for presentation use.</li>
             <li>Worked on the frontend of a website revamp project using modern web technologies and contributed to backend routing.</li>
             <li>Took ownership of assigned project components, including task planning, timelines, implementation and troubleshooting.</li>
             <li>Completed 34,000 Salesforce Trailhead points, including 4 Superbadges and 34 badges during the internship.</li>
@@ -398,12 +438,12 @@ From building business applications and automated reporting pipelines to develop
         <div class="trace-item reveal" style="--d:.1s">
           <div class="trace-node"></div>
           <div class="role-title">AI Research Intern</div>
-          <div class="role-meta">Code4Bots Pvt. Ltd. · Feb 2025 — Apr 2025</div>
+          <div class="role-meta">Code4Bots Pvt. Ltd. · Feb 2025 – Apr 2025</div>
           <ul>
-            <li>Researched companies including Zomato and Zerodha to understand existing workflows and identify realistic opportunities for AI-driven automation.</li>
-            <li>Prepared a 100-slide research and recommendation presentation covering business processes, automation opportunities and proposed AI applications.</li>
+            <li>Researched companies including Zomato and Zerodha to understand existing workflows and identify realistic opportunities for AI driven automation.</li>
+            <li>Prepared a 100 slide research and recommendation presentation covering business processes, automation opportunities and proposed AI applications.</li>
             <li>Contributed to the initial architecture of an AI model tailored to a specific business use case.</li>
-            <li>Developed experience in AI research, communicating technical findings, feasibility analysis and early-stage AI architecture design.</li>
+            <li>Developed experience in AI research, communicating technical findings, feasibility analysis and early stage AI architecture design.</li>
           </ul>
         </div>
       </div>
@@ -421,20 +461,15 @@ From building business applications and automated reporting pipelines to develop
       <div class="featured-project reveal">
         <span class="project-tag">Featured Project · Published Research</span>
         <h3>Parchify — Intelligent Invoice Processing Platform</h3>
-        <p>AI-powered invoice digitization platform designed to extract structured information from printed and handwritten invoices without relying on fixed templates.</p>
+        <p>An AI powered invoice digitization platform designed to extract structured information from printed and handwritten invoices without relying on fixed templates.</p>
         <ul>
           <li>Integrated Google Document AI and OCR for invoice data extraction.</li>
-          <li>Added image preprocessing including deskewing, cropping and noise reduction to improve processing of lower-quality scans.</li>
-          <li>Designed a confidence-based validation layer that flags low-confidence fields for human review instead of accepting uncertain data automatically.</li>
-          <li>Built the frontend using React.js and Tailwind CSS.</li>
-          <li>Developed a Python/FastAPI backend with SQLite-based data storage.</li>
+          <li>Added image preprocessing including deskewing, cropping and noise reduction to improve processing of lower quality scans.</li>
+          <li>Designed a confidence based validation layer that flags low confidence fields for human review instead of accepting uncertain data automatically.</li>
+          <li>Built the frontend using React.js and Tailwind CSS, with a Python/FastAPI backend and SQLite based data storage.</li>
           <li>Added export support for Excel, PDF and JSON.</li>
+          <li>Built a vendor agnostic pipeline (Google Document AI OCR → canonical schema → arithmetic and tax validation) achieving 94.3% OCR accuracy and a 91.2% field extraction F1 score, with 88.5% of invoices passing automated validation and manual review reduced to just 11.5% of volume.</li>
           <li>Co-authored research based on the framework, published in the International Journal of Computer Applications.</li>
-          <li><p>Built a vendor-agnostic invoice processing pipeline (Google Document AI
-OCR → canonical schema → arithmetic/tax validation) achieving 94.3% OCR
-accuracy and 91.2% field extraction F1-score, with 88.5% of invoices passing
-automated validation reducing manual review to 11.5% of volume. Published,
-IJCA 2026.</p></li>
         </ul>
         <div class="modal-tech"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">React.js</span><span class="chip">Tailwind CSS</span><span class="chip">Google Document AI</span><span class="chip">OCR</span><span class="chip">OpenCV</span><span class="chip">SQLite</span></div>
         <button class="featured-cta" data-modal="modal-parchify" type="button">View Details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
@@ -442,21 +477,27 @@ IJCA 2026.</p></li>
       <div class="project-grid">
         <button class="project-card reveal" data-modal="modal-sf" type="button">
           <span class="project-tag">Salesforce</span>
-          <div class="project-icon">SF</div>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a5 5 0 1 1 1.3-9.8A6 6 0 0 1 22 12.5a4 4 0 0 1-1 3.9"/></svg>
+          </div>
           <h3>Recruitment Management System</h3>
           <p>Salesforce Sales Cloud application for managing recruitment workflows with custom objects, reports, dashboards, and access controls.</p>
           <span class="view-more">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
         <button class="project-card reveal" style="--d:.05s" data-modal="modal-linkedin" type="button">
           <span class="project-tag">Python Automation</span>
-          <div class="project-icon">PY</div>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </div>
           <h3>LinkedIn Analytics Automation Pipeline</h3>
-          <p>Python pipeline that transforms raw LinkedIn analytics exports into standardized, presentation-ready executive reports.</p>
+          <p>Python pipeline that transforms raw LinkedIn analytics exports into standardized, presentation ready executive reports.</p>
           <span class="view-more">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
         </button>
         <button class="project-card reveal" style="--d:.1s" data-modal="modal-genai" type="button">
           <span class="project-tag">Generative AI</span>
-          <div class="project-icon">AI</div>
+          <div class="project-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.9 5.8a2 2 0 0 1-1.3 1.3L3 12l5.8 1.9a2 2 0 0 1 1.3 1.3L12 21l1.9-5.8a2 2 0 0 1 1.3-1.3L21 12l-5.8-1.9a2 2 0 0 1-1.3-1.3Z"/></svg>
+          </div>
           <h3>AI Content &amp; Post Generator</h3>
           <p>Generative AI writing application for creating and refining professional social media content with tone and style customization.</p>
           <span class="view-more">View details <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
@@ -474,14 +515,17 @@ IJCA 2026.</p></li>
       </div>
       <div class="highlight-grid">
         <div class="highlight-card reveal">
+          <div class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 15-8 4.5V19a8 8 0 0 1 16 0v.5Z"/><path d="M12 15a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"/></svg></div>
           <div class="big">34,000+</div>
           <div class="label">Salesforce Trailhead Points</div>
         </div>
         <div class="highlight-card reveal" style="--d:.05s">
+          <div class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 0 1-10 0V4Z"/><path d="M7 6H4a2 2 0 0 0 0 4h3M17 6h3a2 2 0 0 1 0 4h-3"/></svg></div>
           <div class="big">4</div>
           <div class="label">Salesforce Superbadges</div>
         </div>
         <div class="highlight-card reveal" style="--d:.1s">
+          <div class="highlight-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.5 13.5 17 22l-5-3-5 3 1.5-8.5"/></svg></div>
           <div class="big">34</div>
           <div class="label">Trailhead Badges</div>
         </div>
@@ -499,28 +543,28 @@ IJCA 2026.</p></li>
       </div>
       <div class="skills-grid">
         <div class="skill-group reveal">
-          <h4>Programming Languages</h4>
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>Programming Languages</h4>
           <div class="chip-row"><span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">SQL</span></div>
         </div>
         <div class="skill-group reveal" style="--d:.05s">
-          <h4>Salesforce</h4>
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a5 5 0 1 1 1.3-9.8A6 6 0 0 1 22 12.5a4 4 0 0 1-1 3.9"/></svg>Salesforce</h4>
           <div class="chip-row"><span class="chip">Salesforce Administration</span><span class="chip">Sales Cloud</span><span class="chip">Apex</span><span class="chip">Lightning Components</span><span class="chip">Flows</span><span class="chip">Process Builder</span><span class="chip">Reports &amp; Dashboards</span><span class="chip">Validation Rules</span><span class="chip">Access Management</span></div>
         </div>
         <div class="skill-group reveal" style="--d:.1s">
-          <h4>Web Development</h4>
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 8h10M7 12h6M3 16h18"/></svg>Web Development</h4>
           <div class="chip-row"><span class="chip">React.js</span><span class="chip">Node.js</span><span class="chip">HTML5 &amp; CSS3</span><span class="chip">Bootstrap</span><span class="chip">Tailwind CSS</span><span class="chip">FastAPI</span></div>
         </div>
         <div class="skill-group reveal" style="--d:.15s">
-          <h4>AI &amp; Automation</h4>
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>AI &amp; Automation</h4>
           <div class="chip-row"><span class="chip">Machine Learning</span><span class="chip">Generative AI</span><span class="chip">OCR</span><span class="chip">Google Document AI</span><span class="chip">OpenCV</span><span class="chip">AI Automation</span><span class="chip">UiPath</span></div>
         </div>
         <div class="skill-group reveal" style="--d:.2s">
-          <h4>Data &amp; Analytics</h4>
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15v3M12 10v8M17 6v12"/></svg>Data &amp; Analytics</h4>
           <div class="chip-row"><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">openpyxl</span><span class="chip">xlrd</span><span class="chip">SQL</span><span class="chip">Tableau</span><span class="chip">Data Validation</span><span class="chip">Business Reporting</span></div>
         </div>
         <div class="skill-group reveal" style="--d:.25s">
-          <h4>Cloud &amp; Tools</h4>
-          <div class="chip-row"><span class="chip">Microsoft Azure</span><span class="chip">Oracle Cloud Infrastructure</span><span class="chip">Git</span></div>
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a5 5 0 1 1 1.3-9.8A6 6 0 0 1 22 12.5a4 4 0 0 1-1 3.9"/><path d="m9 15 2 2 4-4"/></svg>Cloud &amp; Tools</h4>
+          <div class="chip-row"><span class="chip">Microsoft Azure</span><span class="chip">Google Cloud Platform</span><span class="chip">Git</span></div>
         </div>
       </div>
     </div>
@@ -532,7 +576,7 @@ IJCA 2026.</p></li>
       <div class="section-head reveal">
         <span class="eyebrow">Research &amp; Publication</span>
         <h2>Research &amp; Publication</h2>
-        <p>Applying AI and document intelligence to real-world data workflows.</p>
+        <p>Applying AI and document intelligence to real world data workflows.</p>
       </div>
       <div class="pub-strip reveal">
         <div class="pub-image-col">
@@ -540,9 +584,14 @@ IJCA 2026.</p></li>
           <div class="pub-image-placeholder" style="display:none;">Add publication image<br>images/publication.png</div>
         </div>
         <div class="pub-text-col">
-          <span class="pub-badge">IJCA · 2025</span>
+          <span class="pub-badge">IJCA · 2026</span>
           <h3>Vendor-Agnostic Invoice Processing Framework Integrating OCR, Canonical Modeling, and Human-in-the-Loop Validation</h3>
-          <p>Research based on the Parchify invoice-processing framework, exploring a vendor-independent approach for extracting, standardizing and validating invoice information using OCR, canonical data modeling and human-in-the-loop validation.</p>
+          <p>Research based on the Parchify invoice processing framework, exploring a vendor independent approach for extracting, standardizing and validating invoice information using OCR, canonical data modeling and human-in-the-loop validation.</p>
+          <div class="pub-stats">
+            <div class="pub-stat"><span class="num">94.3%</span><span class="lbl">OCR Accuracy</span></div>
+            <div class="pub-stat"><span class="num">91.2%</span><span class="lbl">Extraction F1 Score</span></div>
+            <div class="pub-stat"><span class="num">11.5%</span><span class="lbl">Manual Review Volume</span></div>
+          </div>
           <a class="pub-link" href="https://www.ijcaonline.org/archives/volume187/number90/vendor-agnostic-invoice-processing-framework-integrating-ocr-canonical-modeling-and-human-in-the-loop-validation/" target="_blank" rel="noopener">
             Read Publication <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
           </a>
@@ -559,20 +608,20 @@ IJCA 2026.</p></li>
         <h2>Certifications &amp; Credentials</h2>
       </div>
       <div class="cert-grid">
-        <div class="cert-card reveal" data-cert="azure" type="button">
-          <div class="cert-badge azure">AZ</div>
+        <div class="cert-card reveal" data-cert="azure">
+          <div class="cert-badge azure"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a5 5 0 1 1 1.3-9.8A6 6 0 0 1 22 12.5a4 4 0 0 1-1 3.9"/></svg></div>
           <h4>Microsoft Azure Fundamentals</h4>
           <p>AZ-900 · Score 985/1000</p>
           <span class="cert-detail-btn">View Details</span>
         </div>
-        <div class="cert-card reveal" style="--d:.05s" data-cert="oracle" type="button">
-          <div class="cert-badge oracle">OCI</div>
-          <h4>Oracle Cloud Infrastructure</h4>
-          <p>AI Foundations Associate · 2025</p>
+        <div class="cert-card reveal" style="--d:.05s" data-cert="udemy">
+          <div class="cert-badge udemy"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg></div>
+          <h4>Udemy Certification</h4>
+          <p>Python for Data Science &amp; AI · 2025</p>
           <span class="cert-detail-btn">View Details</span>
         </div>
-        <div class="cert-card reveal" style="--d:.1s" data-cert="ibm" type="button">
-          <div class="cert-badge ibm">IBM</div>
+        <div class="cert-card reveal" style="--d:.1s" data-cert="ibm">
+          <div class="cert-badge ibm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg></div>
           <h4>IBM SkillsBuild</h4>
           <p>AI Fundamentals · Certified</p>
           <span class="cert-detail-btn">View Details</span>
@@ -590,9 +639,12 @@ IJCA 2026.</p></li>
       </div>
       <div class="edu-grid">
         <div class="edu-card reveal">
-          <h3>B.E. Information Technology</h3>
-          <div class="edu-meta">NBN Sinhgad School of Engineering, Pune · 2022 – 2026</div>
-          <p>Savitribai Phule Pune University · CGPA: 7.68 / 10 · First Class</p>
+          <div class="edu-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.1 2.7 2 6 2s6-.9 6-2v-5"/></svg></div>
+          <div>
+            <h3>B.E. Information Technology</h3>
+            <div class="edu-meta">NBN Sinhgad School of Engineering, Pune · 2022 – 2026</div>
+            <p>Savitribai Phule Pune University · CGPA: 7.68 / 10 · First Class</p>
+          </div>
         </div>
       </div>
     </div>
@@ -601,7 +653,7 @@ IJCA 2026.</p></li>
   <!-- CONTACT -->
   <section id="contact" class="dark">
     <div class="wrap contact-simple reveal">
-      <div class="section-head"><span class="eyebrow">Contact</span><h2>Let's Build Something Useful</h2><p>I'm interested in software engineering, Salesforce, automation, and AI‑driven applications. Feel free to reach out.</p></div>
+      <div class="section-head"><span class="eyebrow">Contact</span><h2>Let's Build Something Useful</h2><p>I'm interested in software engineering, Salesforce, automation, and AI driven applications. Feel free to reach out.</p></div>
       <div class="side-block"><h4>Email</h4><a href="mailto:manav.it11@gmail.com">manav.it11@gmail.com</a></div>
       <div class="side-block"><h4>Phone</h4><a href="tel:+918623085183">+91 8623085183</a></div>
       <div class="side-block"><h4>Location</h4><p>Pune, Maharashtra, India</p></div>
@@ -634,10 +686,10 @@ IJCA 2026.</p></li>
     <ul>
       <li>Integrated Google Document AI and OCR for invoice data extraction.</li>
       <li>Added image preprocessing including deskewing, cropping and noise reduction.</li>
-      <li>Designed a confidence-based validation layer with human-in-the-loop review.</li>
+      <li>Designed a confidence based validation layer with human-in-the-loop review.</li>
       <li>Built React.js frontend with Tailwind CSS and Python/FastAPI backend.</li>
       <li>SQLite storage with Excel, PDF and JSON export.</li>
-      <li>Co-authored research published in IJCA.</li>
+      <li>Co-authored research published in IJCA, achieving 94.3% OCR accuracy and a 91.2% field extraction F1 score.</li>
     </ul>
     <div class="modal-tech"><span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">React.js</span><span class="chip">Tailwind CSS</span><span class="chip">Google Document AI</span><span class="chip">OCR</span><span class="chip">OpenCV</span><span class="chip">SQLite</span></div>
   </div>
@@ -650,7 +702,7 @@ IJCA 2026.</p></li>
     <ul>
       <li>Built on Salesforce Sales Cloud during Salesforce Administration training.</li>
       <li>Custom objects, page layouts, reports and dashboards.</li>
-      <li>Validation rules and role-based access controls.</li>
+      <li>Validation rules and role based access controls.</li>
       <li>Workflow and process automation.</li>
       <li>Data management and reporting.</li>
     </ul>
@@ -668,7 +720,7 @@ IJCA 2026.</p></li>
       <li>Cleans and processes analytics data.</li>
       <li>Generates trend lines, monthly comparisons, demographic analysis and KPI summaries.</li>
       <li>Standardizes chart formatting across outputs.</li>
-      <li>Exports matched 600-DPI PNG and SVG charts ready for PowerPoint.</li>
+      <li>Exports matched 600 DPI PNG and SVG charts ready for PowerPoint.</li>
       <li>Includes validation checks before treating a reporting run as complete.</li>
     </ul>
     <div class="modal-tech"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">openpyxl</span><span class="chip">xlrd</span><span class="chip">Data Analytics</span><span class="chip">Automation</span></div>
@@ -680,11 +732,11 @@ IJCA 2026.</p></li>
     <span class="project-tag">Generative AI</span>
     <h3>AI Content &amp; Post Generator</h3>
     <ul>
-      <li>AI-assisted content generation for professional social media.</li>
+      <li>AI assisted content generation for professional social media.</li>
       <li>Tone and style customization.</li>
       <li>Writing style analysis.</li>
       <li>Topic and content suggestions.</li>
-      <li>Export-ready output.</li>
+      <li>Export ready output.</li>
     </ul>
     <div class="modal-tech"><span class="chip">JavaScript</span><span class="chip">Groq API</span><span class="chip">Llama 3.1</span><span class="chip">Generative AI</span></div>
   </div>
@@ -707,7 +759,7 @@ IJCA 2026.</p></li>
 
 <div style="display:none;">
   <div id="cert-detail-azure">Microsoft Azure Fundamentals (AZ-900) validates foundational knowledge of cloud concepts, Azure services, Azure workloads, security, privacy, compliance, and pricing. Scored 985/1000. Certified by Microsoft.</div>
-  <div id="cert-detail-oracle">Oracle Cloud Infrastructure 2025 AI Foundations Associate demonstrates expertise in AI/ML fundamentals, OCI AI services, and data science capabilities on Oracle Cloud.</div>
+  <div id="cert-detail-udemy">Udemy certification in Python for Data Science and AI, covering data analysis, data visualization, and applied machine learning workflows using Python, pandas and scikit-learn.</div>
   <div id="cert-detail-ibm">IBM SkillsBuild AI Fundamentals covers artificial intelligence concepts, machine learning, deep learning, and ethical AI practices. Earned through IBM's digital learning platform.</div>
 </div>
 
