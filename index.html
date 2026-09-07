@@ -187,7 +187,6 @@
             font-size: 15.5px;
         }
 
-        /* Reveal Animations */
         .reveal {
             opacity: 0;
             transform: translateY(40px);
@@ -231,7 +230,6 @@
             transform: translateX(0);
         }
 
-        /* Scroll Progress Bar */
         .scroll-progress {
             position: fixed;
             top: 0;
@@ -244,7 +242,6 @@
             border-radius: 0 3px 3px 0;
         }
 
-        /* NAVIGATION */
         header.site-nav {
             position: fixed;
             top: 0;
@@ -504,7 +501,6 @@
             transform: translateY(0);
         }
 
-        /* HERO */
         .hero {
             position: relative;
             min-height: 100vh;
@@ -794,7 +790,6 @@
             }
         }
 
-        /* SECTIONS */
         section {
             padding: 90px 0;
         }
@@ -871,7 +866,6 @@
             background: #e9ecf7 !important;
         }
 
-        /* ABOUT */
         .about-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -961,7 +955,6 @@
             margin-left: auto;
         }
 
-        /* EXPERIENCE TIMELINE */
         .trace {
             position: relative;
             padding-left: 36px;
@@ -1028,7 +1021,6 @@
             line-height: 1.6;
         }
 
-        /* PROJECTS */
         .featured-project {
             background: var(--surface);
             border: 1px solid var(--border);
@@ -1213,7 +1205,6 @@
             transform: translateX(3px);
         }
 
-        /* HIGHLIGHTS */
         .highlight-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -1278,7 +1269,6 @@
             margin-top: 2px;
         }
 
-        /* SKILLS */
         .skills-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -1334,7 +1324,6 @@
             background: rgba(33, 56, 176, 0.06);
         }
 
-        /* PUBLICATION */
         .pub-strip {
             display: grid;
             gap: 32px;
@@ -1443,7 +1432,6 @@
             height: 12px;
         }
 
-        /* CERTIFICATIONS */
         .cert-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -1525,7 +1513,6 @@
             gap: 7px;
         }
 
-        /* EDUCATION */
         .edu-grid {
             display: grid;
             grid-template-columns: 1fr;
@@ -1584,7 +1571,6 @@
             margin-top: 10px;
         }
 
-        /* CONTACT */
         .contact-simple {
             text-align: center;
             max-width: 640px;
@@ -1634,7 +1620,6 @@
             color: #fff;
         }
 
-        /* MODALS */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -1705,7 +1690,6 @@
             margin-bottom: 7px;
         }
 
-        /* Zoom Modal */
         .zoom-modal {
             position: fixed;
             inset: 0;
@@ -1752,21 +1736,6 @@
             transform: rotate(90deg);
         }
 
-        /* ============ BACKGROUND PATTERNS (RIVIAN STYLE) ============ */
-        /* Hero: subtle grid + gradient (no external file) */
-        .hero {
-            /* already defined with background image, but we'll add an extra grid layer via data URI */
-            background-image:
-                radial-gradient(ellipse at 30% 40%, rgba(33, 56, 176, 0.18) 0%, transparent 60%),
-                radial-gradient(ellipse at 70% 70%, rgba(200, 162, 74, 0.08) 0%, transparent 50%),
-                url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-                linear-gradient(rgba(8, 10, 26, 0.8), rgba(8, 10, 26, 0.8));
-            background-size: cover, cover, auto, cover;
-            background-position: center;
-            background-attachment: fixed;
-        }
-
-        /* About (dark) – add a soft geometric pattern */
         #about.dark {
             background-image:
                 url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3z' fill='%23ffffff' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E"),
@@ -1776,7 +1745,6 @@
             background-attachment: fixed;
         }
 
-        /* Research (dark) – add a light dot matrix */
         #research.dark {
             background-image:
                 url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
@@ -1786,7 +1754,6 @@
             background-attachment: fixed;
         }
 
-        /* Contact (dark) – add a wave-like pattern */
         #contact.dark {
             background-image:
                 url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M21.184 20c.357-.13.72-.264 1.088-.402l1.768-.661C33.64 15.347 39.647 14 50 14c10.271 0 15.362 1.222 24.629 4.928.955.383 1.869.74 2.75 1.072h6.225c-2.51-.73-5.139-1.691-8.233-2.928C65.888 13.278 60.562 12 50 12c-10.626 0-16.855 1.397-26.66 5.063l-1.767.662c-2.475.923-4.66 1.674-6.724 2.275h6.335zm0-20C13.258 2.892 8.077 4 0 4V2c5.744 0 9.951-.574 14.85-2h6.334zM77.38 0C85.239 2.966 90.502 4 100 4V2c-6.842 0-11.386-.542-16.396-2h-6.225zM0 14c8.44 0 13.718-1.21 22.272-4.402l1.768-.661C33.64 5.347 39.647 4 50 4c10.271 0 15.362 1.222 24.629 4.928C84.112 12.722 89.438 14 100 14v-2c-10.271 0-15.362-1.222-24.629-4.928C65.888 3.278 60.562 2 50 2 39.374 2 33.145 3.397 23.34 7.063l-1.767.662C13.223 10.84 8.163 12 0 12v2z' fill='%23ffffff' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E"),
@@ -1796,7 +1763,6 @@
             background-attachment: fixed;
         }
 
-        /* For mobile: disable fixed attachment to prevent jank */
         @media (max-width: 768px) {
             .hero,
             #about.dark,
@@ -2013,13 +1979,13 @@
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                         </span>
                     </button>
-                    <button class="project-card reveal" style="--d:.08s" data-modal="modal-linkedin" type="button">
-                        <span class="project-tag">Python Automation</span>
+                    <button class="project-card reveal" style="--d:.08s" data-modal="modal-rag" type="button">
+                        <span class="project-tag">Generative AI · RAG</span>
                         <div class="project-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"/><path d="M12 6v6m0 0 3-3m-3 3-3-3"/></svg>
                         </div>
-                        <h3>LinkedIn Analytics Automation Pipeline</h3>
-                        <p>Python pipeline that transforms raw LinkedIn analytics exports into standardized, presentation-ready executive reports.</p>
+                        <h3>PDF-based RAG Q&amp;A System</h3>
+                        <p>Locally-hosted RAG pipeline that lets users upload unstructured PDFs and ask natural-language questions grounded strictly in document content.</p>
                         <span class="view-more">View details
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
                         </span>
@@ -2066,7 +2032,7 @@
             </div>
         </section>
 
-        <!-- SKILLS -->
+        <!-- SKILLS / TECHNICAL EXPERTISE -->
         <section id="expertise" class="alt">
             <div class="wrap">
                 <div class="section-head reveal">
@@ -2089,7 +2055,20 @@
                     </div>
                     <div class="skill-group reveal" style="--d:.15s">
                         <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/></svg>AI &amp; Automation</h4>
-                        <div class="chip-row"><span class="chip">Machine Learning</span><span class="chip">Generative AI</span><span class="chip">OCR</span><span class="chip">Google Document AI</span><span class="chip">OpenCV</span><span class="chip">AI Automation</span><span class="chip">UiPath</span></div>
+                        <div class="chip-row">
+                            <span class="chip">Machine Learning</span>
+                            <span class="chip">OCR</span>
+                            <span class="chip">Google Document AI</span>
+                            <span class="chip">Generative AI</span>
+                            <span class="chip">Retrieval-Augmented Generation (RAG)</span>
+                            <span class="chip">LangChain</span>
+                            <span class="chip">Sentence Transformers</span>
+                            <span class="chip">Vector Databases (ChromaDB)</span>
+                            <span class="chip">Semantic Search</span>
+                            <span class="chip">Local LLM Deployment (Ollama)</span>
+                            <span class="chip">AI Automation</span>
+                            <span class="chip">UiPath</span>
+                        </div>
                     </div>
                     <div class="skill-group reveal" style="--d:.2s">
                         <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 15v3M12 10v8M17 6v12"/></svg>Data &amp; Analytics</h4>
@@ -2243,21 +2222,20 @@
             <div class="modal-tech"><span class="chip">Salesforce Sales Cloud</span><span class="chip">Salesforce Administration</span><span class="chip">Apex</span><span class="chip">Lightning Components</span><span class="chip">Flows</span><span class="chip">Reports &amp; Dashboards</span></div>
         </div>
     </div>
-    <div class="modal-overlay" id="modal-linkedin">
+    <div class="modal-overlay" id="modal-rag">
         <div class="modal-box">
             <button class="modal-close" data-close type="button">✕</button>
-            <span class="project-tag">Python Automation</span>
-            <h3>LinkedIn Analytics Automation Pipeline</h3>
+            <span class="project-tag">Generative AI · RAG</span>
+            <h3>PDF-based RAG Q&amp;A System</h3>
             <ul>
-                <li>Detects file formats and spreadsheet structures automatically.</li>
-                <li>Locates relevant header rows from raw analytics exports.</li>
-                <li>Cleans and processes analytics data.</li>
-                <li>Generates trend lines, monthly comparisons, demographic analysis and KPI summaries.</li>
-                <li>Standardizes chart formatting across outputs.</li>
-                <li>Exports matched 600 DPI PNG and SVG charts ready for PowerPoint.</li>
-                <li>Includes validation checks before treating a reporting run as complete.</li>
+                <li>Building a locally-hosted RAG pipeline that lets users upload unstructured PDFs and ask natural-language questions grounded strictly in document content.</li>
+                <li>Full stack: PDF ingestion (PyMuPDF), text chunking, embedding generation (Sentence Transformers), vector storage and semantic retrieval (ChromaDB), and local LLM-based answer generation (Qwen3 via Ollama).</li>
+                <li>Implemented a document-grounded prompting strategy that restricts the LLM to retrieved context and explicitly flags when an answer is not present in the source PDFs.</li>
+                <li>Provides source and page-level citations for generated answers to reduce hallucination.</li>
+                <li>Currently extending the MVP with multi-PDF ingestion, improved semantic chunking, retrieval/answer evaluation, and a Streamlit-based chat interface.</li>
+                <li>Public GitHub release and documentation planned next.</li>
             </ul>
-            <div class="modal-tech"><span class="chip">Python</span><span class="chip">pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">openpyxl</span><span class="chip">xlrd</span><span class="chip">Data Analytics</span><span class="chip">Automation</span></div>
+            <div class="modal-tech"><span class="chip">Python</span><span class="chip">PyMuPDF</span><span class="chip">Sentence Transformers</span><span class="chip">ChromaDB</span><span class="chip">Ollama</span><span class="chip">Qwen3</span><span class="chip">RAG</span><span class="chip">LangChain</span><span class="chip">Streamlit</span></div>
         </div>
     </div>
     <div class="modal-overlay" id="modal-genai">
@@ -2346,10 +2324,6 @@
 
             document.querySelectorAll('.reveal, .reveal-scale, .reveal-left, .reveal-right').forEach(el => {
                 io.observe(el);
-                const counter = el.querySelector('[data-counter]');
-                if (counter && counter.closest('.reveal')) {
-                    // Will be handled when parent reveals
-                }
             });
 
             function animateCounter(el) {
